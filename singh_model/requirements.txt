@@ -1,0 +1,8 @@
+tensorflow-gpu==1.15.0
+keras
+pandas
+sci-py==1.1.0
+nltk
+h5py
+dill
+Pillow
