@@ -690,7 +690,7 @@ class TrainingLogic(object):
 
         signal.signal(signal.SIGTERM, validate_then_stop)
         signal.signal(signal.SIGINT, validate_next)
-        signal.signal(signal.SIGUSR1, stop_training)
+        #signal.signal(signal.SIGUSR1, stop_training)
 
     def _set_flags_after_validation(self):
         if self.validate_then_stop:

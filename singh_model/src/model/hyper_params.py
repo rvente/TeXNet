@@ -29,6 +29,7 @@ Tested on python 2.7
 import logging
 import numpy as np
 import os
+import pickle
 import tensorflow as tf
 import data_commons as dtc
 import dl_commons as dlc
@@ -186,12 +187,12 @@ class GlobalParams(dlc.HyperParams):
         PD(
             'H', 'Height of feature-map produced fed to the decoder.',
             integer(1),
-            LambdaVal(lambda _, p: p.H0 if (p.REGROUP_IMAGE is None) else p.H0 / p.REGROUP_IMAGE[0])
+            LambdaVal(lambda _, p: p.H0 if (p.REGROUP_IMAGE is None) else p.H0 // p.REGROUP_IMAGE[0])
         ),
         PD(
             'W', 'Width of feature-map fed to the decoder.',
             integer(1),
-            LambdaVal(lambda _, p: p.W0 if (p.REGROUP_IMAGE is None) else p.W0 / p.REGROUP_IMAGE[1])
+            LambdaVal(lambda _, p: p.W0 if (p.REGROUP_IMAGE is None) else p.W0 // p.REGROUP_IMAGE[1])
         ),
         PD(
             'L',
@@ -293,24 +294,24 @@ class GlobalParams(dlc.HyperParams):
         self._trickledown()
 
     def _trickledown(self):
-
-        data_props = np.load(os.path.join(self.raw_data_dir, 'data_props.pkl'),allow_pickle=True)
+        with open(os.path.join(self.raw_data_dir, 'data_props.pkl'), 'rb') as pickle_file:
+            data_props = np.load(pickle_file,encoding="latin1",allow_pickle=True)
         num_channels = 1 if (self.build_image_context == 2) else 3
         self.image_shape_unframed = (data_props['padded_image_dim']['height'], data_props['padded_image_dim']['width'], num_channels)
 
         self.SpaceTokenID = data_props['SpaceTokenID']
         self.NullTokenID = data_props['NullTokenID']
         self.StartTokenID = data_props['StartTokenID']
-        self.MaxSeqLen = data_props['MaxSeqLen']
+        self.MaxSeqLen = int(data_props['MaxSeqLen'])
         if self.SpaceTokenID is not None:
             if False: # self.use_ctc_loss:
-                self.K = data_props['K'] + 1
+                self.K = int(data_props['K']) + 1
                 self.CTCBlankTokenID = self.K - 1
             else:
-                self.K = data_props['K']
+                self.K = int(data_props['K'])
                 self.CTCBlankTokenID = None
         else:
-            self.K = data_props['K'] + 1
+            self.K = int(data_props['K']) + 1
             self.CTCBlankTokenID = self.K - 1
 
     def __copy__(self):
