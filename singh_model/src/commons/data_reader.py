@@ -310,7 +310,7 @@ class BatchImageIterator1(ShuffleIterator):
         ShuffleIterator.__init__(self, df, hyper)
 
     def __next__(self):
-        nxt = ShuffleIterator.next(self)
+        nxt = ShuffleIterator.__next__(self)
         df_batch = nxt.df_batch[['image', 'height', 'width', 'bin_len', 'seq_len']]
         im_batch = [
             self._image_processor.get_array(os.path.join(self._image_dir, row[0]), row[1], row[2], self._padded_im_dim)
@@ -346,7 +346,7 @@ class BatchImageIterator2(ShuffleIterator):
         ShuffleIterator.__init__(self, df, hyper, num_steps, num_epochs)
 
     def __next__(self):
-        nxt = ShuffleIterator.next(self)
+        nxt = ShuffleIterator.__next__(self)
         df_batch = nxt.df_batch[['image', 'height', 'width']]
         im_batch = [
             self._image_processor.get_array(os.path.join(self._image_dir, row[0]), row[1], row[2], self._padded_im_dim)
@@ -385,7 +385,7 @@ class BatchImageIterator3(ShuffleIterator):
         ShuffleIterator.__init__(self, df, hyper, num_steps, num_epochs, name)
 
     def __next__(self):
-        nxt = ShuffleIterator.next(self)
+        nxt = ShuffleIterator.__next__(self)
         # df_batch = nxt.df_batch[['image', 'bin_len', 'seq_len', 'squashed_len']]
         # a_batch = [
         #     self._image_processor.get_array(row[0]) for row in df_batch.itertuples(index=False)

@@ -1243,9 +1243,9 @@ def group2D(a, stride):
     assert W%w == 0
 
     rows = []
-    for j in range(H/h):
+    for j in range(H//h):
         row = []
-        for i in range(W/w):
+        for i in range(W//w):
             block = a[:, j*h:(j+1)*h, i*w:(i+1)*w]  # (B, h, w, C)
             block = tf.reshape(block, [B, -1])  # (B, h*w*C)
             row.append(block)  # [(B, h*w*C), ...]

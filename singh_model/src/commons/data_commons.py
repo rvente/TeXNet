@@ -106,7 +106,7 @@ def dump(ar, *paths):
 
 def load(*paths):
     with open(join(*paths), 'rb') as f:
-        return pickle.load(f)
+        return pickle.load(f,encoding="latin1")
 
 
 class Storer(object):
