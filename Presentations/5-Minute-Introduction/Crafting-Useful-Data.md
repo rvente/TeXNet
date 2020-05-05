@@ -58,27 +58,28 @@ header-includes:
 
 * Everything autopopulates in 5 minutes or less.
 
-# Demo
+# Im2Latex Model
 
-* [Adding a Lab](https://github.com/Hunter-Open-Source-Club/CSCI-135-Site)
+## Upgrading
 
-# Development
+* [Ported model to Python 3](https://github.com/untrix/im2latex)
+* Future plans to upgrade Tensorflow to v2
+* Deal with deprecated dependencies 
 
-## Dependencies
+# Progress so far 
 
-* Install `ruby`,`ruby-bundler`, and `nodejs`.
-  on Ubuntu `sudo apt install ruby-dev ruby-bundler nodejs`. On Arch,
-  `sudo pacman -S ruby ruby-bundler nodejs`.
+## Training model
 
-## Local Deployment
+* Model has been deployed on a Google-Cloud GPU learner and locally for consistency
+* Trains without problems - all log files show promising results
+* Currently has problems restoring from checkpoint
 
-Then, intitialize the local development environment using
+## Following Upgrades to Model
 
-* `bundle clean` (no `--force`)
-* `bundle install`
-* `bundle exec jekyll serve`
+* Be able to tweak the attention model and customizable hyperparameters of the model
+* Upgrade preproccessing scripts to work on Blake's generated data for consistency
+* Experiment with running the  model on various data categories (i.e Matrices, Equations, Piecewise Functions)
 
-* Visit `localhost:4000` to see the site on your local server. Kill the server using `CTRL+C` in the appropriate terminal.
 
 # Additional Documentation
 
