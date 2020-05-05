@@ -1,6 +1,6 @@
 ---
-title: "Data Engineering"
-author: Blake Vente
+title: "\\TeX Net Project"
+author: "Alex and Blake"
 toc: true
 type: pages
 layout: posts
@@ -8,62 +8,85 @@ layout: posts
 links-as-notes: true
 header-includes:
   - "\\usetheme{metropolis}"
-#pandoc site.md -t beamer -i -o slides.pdf  
 ---
 
-# Constraints
+# The `im2latex` problem
 
-* free hosting
+## OpenAI request for research
 
-* no fine print
+![Original OpenAI Request for Research](assets/openai.pdf)
 
-* familiar
 
-* easy to maintain
+# Proposed Model
 
-* mobile friendly
+* Neural Network
 
-* Screen-Reader Friendly (accessibility)
+* Recurrent Neural Network (RNN)
 
-# Solutions
+* Long-Short-Term-Memory (LSTM)
 
-## Github-centered Workflow
+* attention mechanism
 
-* GitHub Pages
+# `im2latex` Deng et al. 2017 
 
-* GitHub Markdown
+* introduced `im2latex-100k` dataset
 
-* Open Source
+* matched formulae using regular expressions, only
 
-## GitHub Markdown
+* normalized formulae
 
-* superset of HTML
+* BiLingual Evaluation Understudy (BLEU) of 87.73
 
-* reduces our maintenence complexity
+# Other Solutions to `im2latex`
 
-# Inter-Op
+| Researchers  | BLEU Score | Training Time |
+|--------------|------------|---------------|
+| Deng et al 2017 | 87.73 | 20 hours |
+| Genthial 2017 | 88.00 | - |
+| Wang, Sun & Wang 2018 | 88.25 |  - |
+| Singh 2018 | 89.00 | 60 hours |
+| Wang & Liu 2019 | 90.28 | 75 hours|
 
-* Losslessly convert between HTML and Markdown
-  using Pandoc
+# Singh's `im2latex`
 
-# Maintenence
+![Performance across datasets](assets/fig2.png)
 
-* `_posts/labs/` stores the labs
+# Comments
 
-* `_posts/readings/` stores the readings
+![Comments by Singh](assets/fig3.png)
 
-* `etc`...
+# Wang & Liu's `im2latex`
 
-* Push to `master`...
+![Performance by number of tokens Wang & Liu](assets/fig1.png)
 
-* Everything autopopulates in 5 minutes or less.
+# Our Data
 
-# Im2Latex Model
+## We have
+
+* [Harvested 1 month of publications Jan 2018](http://archive.org/)
+
+* Extracted All TeX files
+
+* Expanded macros in 7200 files
+
+* Extracted 15,220 \LaTeX{} files
+
+## We want
+
+* higher matching rate
+
+* class balance
+
+* token length balance
+
+# Singh's `im2latex`  Model
 
 ## Upgrading
 
 * [Ported model to Python 3](https://github.com/untrix/im2latex)
+
 * Future plans to upgrade Tensorflow to v2
+
 * Deal with deprecated dependencies 
 
 # Progress so far 
@@ -78,9 +101,5 @@ header-includes:
 
 * Be able to tweak the attention model and customizable hyperparameters of the model
 * Upgrade preproccessing scripts to work on Blake's generated data for consistency
-* Experiment with running the  model on various data categories (i.e Matrices, Equations, Piecewise Functions)
+* Experiment with running the  model on various data categories (i.e Matrices, Equations, Piece-wise Functions)
 
-
-# Additional Documentation
-
- - [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
