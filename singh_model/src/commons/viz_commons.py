@@ -461,18 +461,14 @@ class VisualizeDir(object):
 
         df1 = self.strs(graph, step, 'y', 'predicted_ids', mingle=False, trim=True, wrap_strs=False, sortkey='ed')
         df2 = self.df(graph, step, 'ed', 'image_name')
-        formula_names = df2.image_name.str.extract(r'(.+)_basic\.png', expand=False)
-        formula_names.name = 'formula_name'
         df = pd.DataFrame({'_iloc': df1['_iloc'],
-                           'image_name': df2.image_name,
                            'ed': df1.ed,
                            'target_len': df1.y_len,
                            'target_seq': df1.y,
                            'pred_len': df1.predicted_ids_len,
                            'pred_seq': df1.predicted_ids}, index=df1.index)
-        df.index = df2.image_name.str.replace(r'_basic.png$', '.png')
         df.index.name = 'eval_image_name'
-        colsort = ['image_name', '_iloc', 'ed', 'target_len', 'target_seq', 'pred_len', 'pred_seq']
+        colsort = ['_iloc', 'ed', 'target_len', 'target_seq', 'pred_len', 'pred_seq']
         df = df[colsort]
         df_result = df.assign(score_pred=0, score_gold=0)[['target_seq', 'pred_seq', 'score_pred', 'score_gold']]
         df_data = df[['_iloc']]
