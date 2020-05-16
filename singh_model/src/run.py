@@ -36,6 +36,9 @@ import data_commons as dtc
 import hyper_params
 import train_multi_gpu
 
+# blake
+os.environ['TF_ENABLE_AUTO_MIXED_PRECISION'] = '1'
+
 def main():
     logger = dtc.makeLogger(set_global=True)
 

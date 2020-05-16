@@ -1,7 +1,7 @@
-tensorflow-gpu==1.15.0
+tensorflow-gpu==1.14.0
 keras
 pandas
-sci-py==1.1.0
+scipy==1.1.0
 nltk
 h5py
 dill

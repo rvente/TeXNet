@@ -189,6 +189,10 @@ def make_batch_list(df_, batch_size_, assert_whole_batch=True):
     # Make a list of batches indices
     bin_lens = sorted(df_.bin_len.unique())
     bin_counts = [df_[df_.bin_len==l].shape[0] for l in bin_lens]
+    print('############### BIN COUNTS ##################')
+    for c in range(len(bin_counts)):
+        print(bin_counts[c])
+    print('#############################################')
     batch_list = []
     for i in range(len(bin_lens)):
         bin_ = bin_lens[i]
