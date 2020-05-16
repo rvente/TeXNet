@@ -2133,7 +2133,18 @@
     <bcf:citekey order="2">deng2016you</bcf:citekey>
     <bcf:citekey order="3">deng2016you</bcf:citekey>
     <bcf:citekey order="4">deng2016you</bcf:citekey>
-    <bcf:citekey order="5">deng2016you</bcf:citekey>
+    <bcf:citekey order="5">genthial2016image</bcf:citekey>
+    <bcf:citekey order="6">wang2019translating</bcf:citekey>
+    <bcf:citekey order="7">bender2019learning</bcf:citekey>
+    <bcf:citekey order="8">deng2016you</bcf:citekey>
+    <bcf:citekey order="9">singh2018teaching</bcf:citekey>
+    <bcf:citekey order="10">singh2018teaching</bcf:citekey>
+    <bcf:citekey order="11">deng2016you</bcf:citekey>
+    <bcf:citekey order="12">deng2016you</bcf:citekey>
+    <bcf:citekey order="13">bender2019learning</bcf:citekey>
+    <bcf:citekey order="14">deng2016you</bcf:citekey>
+    <bcf:citekey order="15">singh2018teaching</bcf:citekey>
+    <bcf:citekey order="16">papineni2002bleu</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

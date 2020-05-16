@@ -1,0 +1,8 @@
+Math encased in dollar-signs has been deprecated in
+  \LaTeX{}, but remains in wide use as an artifact from \TeX{}. It was
+  deprecated to facilitate parsing: unlike \verb|\(| which indicates that it
+  opens to the right, the dollar-sign has no such indication. The reason the
+  previous scripts were matching text was because the hanging \verb|$| of the
+  first line matched with the very first dollar sign of the 4th line. Viewed another way,
+  the regex was using the same token twice, which initially caused a false match marked as (1).
+^^E^^L 

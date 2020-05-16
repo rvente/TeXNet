@@ -1,0 +1,85 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: I2LPaper_NIPS2018.aux
+The style file: apalike.bst
+I couldn't open database file I2LPaper_NIPS2018.bib
+---line 116 of file I2LPaper_NIPS2018.aux
+ : \bibdata{I2LPaper_NIPS2018
+ :                           }
+I'm skipping whatever remains of this command
+I found no database files---while reading file I2LPaper_NIPS2018.aux
+Warning--I didn't find a database entry for "Yu2015MultiScaleCA"
+Warning--I didn't find a database entry for "Vaswani2017AttentionIA"
+Warning--I didn't find a database entry for "Oord2016PixelRN"
+Warning--I didn't find a database entry for "Oord2016ConditionalIG"
+Warning--I didn't find a database entry for "Salimans2017PixelCNNIT"
+Warning--I didn't find a database entry for "Theis2015GenerativeIM"
+Warning--I didn't find a database entry for "Karpathy2015DeepVA"
+Warning--I didn't find a database entry for "Xu2015ShowAA"
+Warning--I didn't find a database entry for "Johnson2016DenseCapFC"
+Warning--I didn't find a database entry for "DBLP:journals/corr/PedersoliLSV16"
+Warning--I didn't find a database entry for "Vinyals2015ShowAT"
+Warning--I didn't find a database entry for "Donahue2015LongtermRC"
+Warning--I didn't find a database entry for "Oord2016WaveNetAG"
+Warning--I didn't find a database entry for "Graves2008OfflineHR"
+Warning--I didn't find a database entry for "Bluche2016JointLS"
+Warning--I didn't find a database entry for "Graves2013GeneratingSW"
+Warning--I didn't find a database entry for "Cho2014LearningPR"
+Warning--I didn't find a database entry for "Bahdanau2014NeuralMT"
+Warning--I didn't find a database entry for "Kalchbrenner2016NeuralMT"
+Warning--I didn't find a database entry for "Sutskever2014SequenceTS"
+Warning--I didn't find a database entry for "Graves2006ConnectionistTC"
+Warning--I didn't find a database entry for "DBLP:journals/corr/ChanJLV15"
+Warning--I didn't find a database entry for "DBLP:journals/corr/abs-1303-5778"
+Warning--I didn't find a database entry for "Graves2008SupervisedSL"
+Warning--I didn't find a database entry for "DBLP:journals/corr/LuongPM15"
+Warning--I didn't find a database entry for "Deng2017ImagetoMarkupGW"
+Warning--I didn't find a database entry for "Hochreiter:1997:LSM:1246443.1246450"
+Warning--I didn't find a database entry for "Pascanu2013HowTC"
+Warning--I didn't find a database entry for "Zaremba2014RecurrentNN"
+Warning--I didn't find a database entry for "Kingma2014AdamAM"
+Warning--I didn't find a database entry for "Liu2017AttentionCI"
+Warning--I didn't find a database entry for "Bluche2014ACO"
+Warning--I didn't find a database entry for "Simonyan2014VeryDC"
+You've used 0 entries,
+            1935 wiz_defined-function locations,
+            536 strings with 5078 characters,
+and the built_in function-call counts, 17 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 2 error messages)
