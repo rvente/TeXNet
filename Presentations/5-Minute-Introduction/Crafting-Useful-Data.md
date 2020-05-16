@@ -39,7 +39,7 @@ header-includes:
 
 # Other Solutions to `im2latex`
 
-| Researchers  | BLEU Score | Training Time |
+| Researchers  | BLEU Score (%) | Training Time |
 |--------------|------------|---------------|
 | Deng et al 2017 | 87.73 | 20 hours |
 | Genthial 2017 | 88.00 | - |
@@ -103,3 +103,10 @@ header-includes:
 * Upgrade preproccessing scripts to work on Blake's generated data for consistency
 * Experiment with running the  model on various data categories (i.e Matrices, Equations, Piece-wise Functions)
 
+# Timeline
+
+* Finalize Porting (3 days)
+
+* Initial Assessments (4 days)
+
+* Final Runs 
