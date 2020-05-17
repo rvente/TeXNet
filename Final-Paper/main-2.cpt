@@ -1,8 +1,9 @@
-Math encased in dollar-signs has been deprecated in
-  \LaTeX{}, but remains in wide use as an artifact from \TeX{}. It was
-  deprecated to facilitate parsing: unlike \verb|\(| which indicates that it
-  opens to the right, the dollar-sign has no such indication. The reason the
-  previous scripts were matching text was because the hanging \verb|$| of the
-  first line matched with the very first dollar sign of the 4th line. Viewed another way,
-  the regex was using the same token twice, which initially caused a false match marked as (1).
-^^E^^L 
+Examples flow from archive.org and are stored on our
+    disks, where we extract the \texttt{tar} files first by day, then by
+    submission, into the document folders. Then \texttt{pandoc} pulls in all of
+    the dependencies of this particular document and writes out one stand-alone
+    document with macros expanded. Then we match the regular expression
+    \verb|\((.*?)\)| that \texttt{pandoc} uses to wrap mathematical expressions.
+    As a general tool \texttt{pandoc} can convert between other markup language
+    in the same way, making it useful for standardizing data from disparate
+    sources.^^E^^L 

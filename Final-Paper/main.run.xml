@@ -55,7 +55,8 @@
       <file>biblatex.def</file>
       <file>standard.bbx</file>
       <file>alphabetic.bbx</file>
-      <file>authoryear.cbx</file>
+      <file>numeric-comp.cbx</file>
+      <file>ieee.cbx</file>
       <file>biblatex.cfg</file>
       <file>english.lbx</file>
     </requires>
