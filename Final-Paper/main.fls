@@ -16,6 +16,8 @@ INPUT /usr/share/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/share/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/share/texmf-dist/tex/generic/babel/babel.def
 INPUT /usr/share/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT /usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -34,8 +36,8 @@ INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/longtable.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/longtable.sty
-INPUT /usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
-INPUT /usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /home/ralph/github/TeXNet.ai/Final-Paper/booktabs.sty
+INPUT /home/ralph/github/TeXNet.ai/Final-Paper/booktabs.sty
 INPUT /usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texmf-dist/tex/latex/cprotect/cprotect.sty
@@ -204,10 +206,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.toc
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
-OUTPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 OUTPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+OUTPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.toc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
@@ -260,11 +262,11 @@ INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main-3.cpt
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.aux
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.run.xml
 OUTPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.run.xml
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rmsc.enc
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
@@ -277,6 +279,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr17.pfb
@@ -286,6 +289,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmtt8.pfb

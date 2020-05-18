@@ -2,6 +2,11 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage[doublespacing]{setspace}
+%\usepackage{setspace}
+%\openup 1em
+%\linespread{2}
+%\setstretch{2} 
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -20,14 +25,16 @@
 
 \usepackage{listings}
 \lstset{
-  escapeinside={(*@}{@*)},
-  basicstyle=\ttfamily,
-  breaklines=true
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
 }
  
 \setcounter{tocdepth}{1}
 
 \usepackage[margin=.5cm]{caption}
+\captionsetup{font=doublespacing}% Double-spaced float captions
 % \captionsetup{margin=3cm} inside a figure
 % to change only that figure
  
@@ -37,6 +44,10 @@
  ]{biblatex}
 \addbibresource{main.bib}
 \usepackage{chngpage}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{equation}{\leavevmode\singlespace}
+\AfterEndEnvironment{equation}{\endsinglespace\vskip0.5\baselineskip\noindent\ignorespaces}
 
 
 \makeatletter
@@ -375,11 +386,16 @@ predictive of human judgements, resulting in its widespread use in translation
 tasks.
 
 We use the same reformulation of this metric as \parencite{singh2018teaching}
-and \parencite{deng2016you}, the bigram \BLEU{} (\BLEU{}2) score computed with $w_1=w_2=.5$
-and $w_i = 0$ for $i>2$. The scores we report actually compare non-normalized
-target sequences to the normalized predicted sequences, resulting in a
-pessimistic predictive score because the network was not trained on this
-sequence. Despite this, the \BLEU{}2 scores are satisfactory.
+and \parencite{deng2016you}, the bigram \BLEU{} (\BLEU{}2) score computed with
+$w_1=w_2=.5$ and $w_i = 0$ for $i>2$. Also like Singh, the scores we report
+actually compare non-normalized target sequences to the normalized predicted
+sequences, resulting in a pessimistic predictive score because the network was
+not trained on this sequence. Despite this, the \BLEU{}2 scores are quite
+satisfactory.
+
+% This might indicate that the majority of input sequences in our
+% \texttt{im2latex170k} corpus were fairly close to being normalized. We can
+% test this by comparing the normalized corpus to the non-normalized one.
 
 \subsection{Limitations and Future work}
 
@@ -407,17 +423,18 @@ sequence. Despite this, the \BLEU{}2 scores are satisfactory.
   \begin{lstlisting}[basicstyle=\footnotesize\ttfamily]
   $. It would be of interest to rederive this result using the refined Kostant constants. \begin{theorem}[{\cite[Theorem 1.1]{CKM}}] \label{thm:volkn11} Let $    
   \end{lstlisting}
-   \cprotect\caption{From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial} 
-This is a sample from a particular document whose source code induced a false
-match. Math code encased in dollar-signs has been deprecated in \LaTeX{}, but
-remains in wide use as an artifact from \TeX{}. It was deprecated to facilitate
-parsing: unlike \verb|\(| which indicates that the expression opens to the
-right, the dollar-sign gives no such indication. The reason the previous scripts
-were matching these plain-text strings was because matching all strings that
-start and end in dollar-signs doesn't preclude text from matching. In this case,
-the last \verb|$| of the first line matched with the first \verb|$| of the 4th
-line.}\label{falsematch}
+   \cprotect\caption{From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial} }\label{falsematch}
 \end{figure}
+
+Figure~\ref{falsematch} is a sample from a particular document whose source code
+induced a false match. Math code encased in dollar-signs has been deprecated in
+\LaTeX{}, but remains in wide use as an artifact from \TeX{}. It was deprecated
+to facilitate parsing: unlike \verb|\(| which indicates that the expression
+opens to the right, the dollar-sign gives no such indication. The reason the
+previous scripts were matching these plain-text strings was because matching all
+strings that start and end in dollar-signs doesn't preclude text from matching.
+In this case, the last \verb|$| of the first line matched with the first
+\verb|$| of the 4th line.
 
 \end{appendix}
 \end{document}
