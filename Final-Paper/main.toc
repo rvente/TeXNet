@@ -1,0 +1,34 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Previous Work}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Debut}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}\input main-1.cpt\relax }{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Architectural Designs}{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Corpus Harvesting}{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Challenges}{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Innovations}{3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Product}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Network Architecture}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Convolutional Neural Network}{6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Training and Evaluation}{6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Limitations and Future work}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A}Qualitative Analysis}{10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1}Reducing Plain Text Matches}{10}% 

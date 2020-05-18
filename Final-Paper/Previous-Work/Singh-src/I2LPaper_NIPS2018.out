@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{The Im2Latex problem}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Image to markup model}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Encoder}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Decoder}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Inferencing}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Visual attention and alignment model}{subsection.2.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.3}{LSTM stack}{subsection.2.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Deep output layer}{subsection.2.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.5}{Init model}{subsection.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Training}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Results}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Model Interpretability via attention}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Dataset}{section.3}% 14
+\BOOKMARK [1][-]{appendix.A}{Qualitative analyses and details}{}% 15
+\BOOKMARK [2][-]{subsection.A.1}{Encoder}{appendix.A}% 16
+\BOOKMARK [2][-]{subsection.A.2}{Attention model}{appendix.A}% 17
+\BOOKMARK [2][-]{subsection.A.3}{LSTM stack}{appendix.A}% 18
+\BOOKMARK [2][-]{subsection.A.4}{Deep output layer}{appendix.A}% 19
+\BOOKMARK [2][-]{subsection.A.5}{Init model}{appendix.A}% 20
+\BOOKMARK [2][-]{subsection.A.6}{Training and dataset}{appendix.A}% 21
+\BOOKMARK [3][-]{subsubsection.A.6.1}{Alpha penalty}{subsection.A.6}% 22

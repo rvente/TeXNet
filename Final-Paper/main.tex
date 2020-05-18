@@ -1,21 +1,42 @@
-\documentclass[]{article}
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{longtable}
 \usepackage{booktabs}
-
+\usepackage{appendix}
+\usepackage{cprotect}
 \usepackage{comment}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage[autostyle]{csquotes}
+\usepackage{pdfpages}
+\usepackage{subcaption}
 
+\graphicspath{ {assets/} }
+
+\usepackage[autostyle]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{listings}
+\lstset{
+  escapeinside={(*@}{@*)},
+  basicstyle=\ttfamily,
+  breaklines=true
+}
+ 
+\setcounter{tocdepth}{1}
+
+\usepackage[margin=.5cm]{caption}
+% \captionsetup{margin=3cm} inside a figure
+% to change only that figure
+ 
  \usepackage[
  backend=biber,
- style=alphabetic,
- citestyle=authoryear
+ citestyle=ieee
  ]{biblatex}
-% \usepackage[backend=biber]{biblatex-chicago}
 \addbibresource{main.bib}
+
 
 \makeatletter
 \DeclareRobustCommand{\KaTeX}{K%
@@ -60,85 +81,328 @@
   examples from source files hoping to minimize these biases.
 \end{abstract}
 
+\tableofcontents
 \section{Previous Work}
+
+\subsection{Debut}
 
 The prospect of accurately transcribing mathematical expression into a markup
 representation is enticing because it opens the doors for bringing new life to
 old mathematical texts or those for which the source code is unavailable.
 
-A Harvard project called \emph{What you get is what you see} (\textsc{Wygiwys})
-by~\cite{deng2016you} documents strategies for machine translation of
-mathematical notation using an attention-based encoder-decoder neural model.
-Notably, the researchers were interested in the influence of markup alone on the
-efficacy of a model --- without providing explicit information about underlying
-grammars \parencite[1]{deng2016you}.
+\citetitle{deng2016you} by~\citeauthor{deng2016you}
+documents strategies for machine translation of mathematical notation using an
+attention-based encoder-decoder neural model. Notably, the researchers were
+interested in the influence of markup alone on the efficacy of a model ---
+without providing explicit information about underlying grammars
+\parencite[1]{deng2016you}. The previous state of the art required exhaustively
+documenting the grammar to allow a conventional character recognition model to
+translate the expression.
 
-Introduced in 2016 by~\cite{deng2016you}, the \texttt{im2latex100k} dataset has
-led research forward by removing the overhead of heavy pre-processing. In recent
-years, it has come under question as a possible bottleneck for progress.
-% TODO: cite singh, bender, and wang's objections
+Introduced in 2016 by~\citeauthor{deng2016you}, the \texttt{im2latex100k} dataset has
+facilitated research by reducing the overhead of heavy pre-processing. Using
+this dataset, other solutions to \textsc{im2latex} have seen substantial
+progress. Recently, it has come under question as a possible \textit{bottleneck} for
+progress. We discuss this in greater detail in Section \ref{datainnov}.
+
+\cprotect
+\subsection{\texttt{im2latex} Problem Specification}
+
+Before delving into how architectures were designed to solve the problem, let us
+first define it. Formally, this problem is a sequence-to-sequence image
+captioning task. A neural model learns an abstract encoding and its respective
+decoding into the original sequence \parencite[1]{deng2016you}. At inference
+time, when presented a single image, the trained model predicts one token at a
+time, aiming to reconstruct the original sequence. All the while, the model
+receives as input the output of previous steps. This is accomplished using
+Long-Short Term Memory, which we outline in \ref{netarch}.
+
+\subsection{Architectural Designs}
+\label{netarch}
+
+Since its inception, solutions to \textsc{im2latex} have used neural models. In
+fact, OpenAI's Request for Research recommended the use of a neural model and
+even specified the sequence-to-sequence attention machanism that makes these
+models suitable for the problem, but there have been a wide variety in the
+particular architectures of the neural models.
+
+% TODO: summarize architecture evolution
+
+\citeauthor{deng2016you}
+\citeauthor{genthial2016image}
+\citeauthor{wang2019translating}
+\citeauthor{bender2019learning}
 
 \section{Corpus Harvesting}
 
+
 \subsection{Challenges}
 
-We harvested examples from Cornell's ArXiv archive. As the ArXiv strictly
+We harvested examples from Cornell's arXiv archive. As the arXiv strictly
 forbids scraping, we found a patron who properly obtained copies and uploaded
 them to \url{archive.org}. We wrote a script to extract the source code files,
 and notably, we use the \texttt{pandoc} document parser.
 
-\LaTeX{} and its subset, \TeX{} pose an unique set of challenges compared to
-other steps of the pre-processing pipeline. \LaTeX{} is a Turing-Complete
-language, equivalent in power to general purpose programming languages like C++.
-It may contain loops and recursion, classifying it as a recursively enumerable
-language. As such, no \LaTeX{} parser is guaranteed to terminate.
-From~\cite{deng2016you}, we also reiterate that several input sequences may map
-to the same output sequence, so we use the same normalization with Khan
-Academy's \KaTeX{} called by their scripts.
+On this note, \LaTeX{} and its subset, \TeX{} pose an unique set of challenges
+compared to other steps of the pre-processing pipeline. \LaTeX{} is a
+Turing-Complete language, equivalent in power to general purpose programming
+languages. From the theoretical standpoint, it may contain loops and recursion,
+classifying it as a recursively enumerable language. As such, no \LaTeX{} parser
+is guaranteed to terminate, and regular expressions alone lack the expressive
+power to extract all cases of a particular pattern. Practically, we mostly
+needed to contend with macro expansion whereby commands used as contractions
+needed expanding into their definition. This means that the original scripts of
+\cite{deng2016you} required substantial changes before being suitable for our
+purposes.
+
+\subsection{Innovations}
+\label{datainnov}
+
+To start, we follow closely in the footsteps of~\citeauthor{singh2018teaching}. After
+preprocessing steps on \texttt{im2latex100k}, Singh arrived upon a dataset of
+93,784 compiling examples, which he regarded as ``too small for good
+generalization.'' As such, he mined additional examples from the KDD Cup 2003
+dataset, resulting in about additional 50,000 examples
+\parencite[8]{singh2018teaching}.  % also
+                                % mention that the others have issues w data[]
 
 Practically, \texttt{pandoc} handled the files from the corpus gracefully, but
-due to unlinked files and mismatched, we set \texttt{timeout 5} to terminate the
-program after 5 seconds of stalling. \texttt{pandoc} also handles ambiguities to
-expression matching. Before, plain text not containing mathematical expressions
-had to be filtered out of the data, but \texttt{pandoc} generates an abstract
-syntax tree and encases the mathematical expressions in the more
-``specific''\footnote{In that it generates fewer false-positives} expression
-\verb|\((.*?)\)| compared to the readily-matching \texttt{\$(.*?)\$}. An example
-of one such false positive that was eliminated is provided in the
-appendix. % TODO: add example
+due to unlinked files and mismatched encodings, we set \texttt{timeout 5} to
+terminate the program after 5 seconds of stalling. \texttt{pandoc} also
+facilitates extracting expressions. Without it, we were presented with the
+challenging prospect of filtering out text not containing mathematical
+expressions, but \texttt{pandoc} generates an abstract syntax tree and encases
+the mathematical expressions in the more ``specific'' expression
+\verb|\((.*?)\)| compared to the expression \texttt{\$(.*?)\$} which resulted in
+false matches that contained only text. One such false match that was eliminated
+is provided in Figure~\ref{falsematch}. As a fall-back, we rely on Singh's script to test
+for the presence of at least one \LaTeX{} command (from the command vocabulary,
+$\Sigma$) before writing out the final formula code. This has the added benefit
+of removing examples that are strictly numbers and those that are otherwise
+linear strings of alphanumeric characters.
+% TODO: cite singh, bender, and wang's objections
 
 Most importantly, \texttt{pandoc} expands all the macros in the source
-documents. In~\cite{deng2016you} the processed formulas required an additional
-step of filtering out such macros. This is one systemic bias of
-\texttt{im2latex100k}.
+documents. Without this step, papers in the dataset that relied heavily on
+macros to shorten the length of the written expressions contributed very few
+formulas to the resulting collection because they caused definition-not-found
+errors and were eliminatedin later steps. In~\cite{deng2016you} the processed
+formulas were discarded implicitly because they caused such errors, but with the
+macros expanding, documents containing macros reclaimed their representation in
+the final set, eliminating one possible source of bias in the dataset.
 
-\section{Topics}
 
-\section{Deliverables}
+%\begin{figure}[!h]
+\begin{figure}[tbp]
+		\includegraphics[scale=1.7]{harvest.pdf}
+    \centering
+    \cprotect\caption{Examples flow from archive.org and are stored on our
+    disks, where we extract the \texttt{tar} files first by day, then by
+    submission, into the document folders. Then \texttt{pandoc} pulls in all of
+    the dependencies of this particular document and writes out one stand-alone
+    document with macros expanded. Then we match the regular expression
+    \verb|\((.*?)\)| that \texttt{pandoc} uses to wrap mathematical expressions.
+    As a general tool \texttt{pandoc} can convert between other markup language
+    in the same way, making it useful for standardizing data from disparate
+    sources.}\label{datapipeline}
+\end{figure}
 
-\subsection{Required Objectives}
+From~\citeauthor{deng2016you}, we also reiterate that several \LaTeX{} input sequences
+map to the same output image, so we use the same normalization with Khan
+Academy's \KaTeX{} as they did in their scripts. Like \texttt{pandoc}, \KaTeX{}
+parses the input sequences into an abstract syntax tree and rebuilds the
+expressions without disrupting
+semantics. % TODO: everyone got better results with this
 
-At the submission deadline, we will have the following prepared:
+\citeauthor[5]{bender2019learning} note that their \textsc{im2latex} model struggled
+very short sequences, and performed better on those that were slightly longer.
+They attribute this to an imbalance in the dataset: very short formulas are
+underepresented. In fact, this may be traced back to the scripts written by
+\cite{deng2016you}, which discarded examples shorter than 40 bytes in length. We
+halved the minimum length of an example.
 
-\begin{enumerate}
-\item All data generated and normalized, building on the work of the Harvard
-  team.
-\item All source code containing our finished models and documentation and
-\item Research paper outlining the intricacies of our models and their
-  performance on generated examples.
-\item Live demo of the model
-\item 2 minute video
-\end{enumerate}
+\subsection{Product}
 
-\subsection{Stretch Goals}
+In all, we mined 1 month of \texttt{tar} files, extracted 15,200 \texttt{tex}
+files, expanded macros 7,200 unique files and generated data 500,000
+syntactically valid examples. We decided to randomly subsample about 40\% of
+that as our final candidate set. After deduplicating, we were left with 170,00
+original examples. Our formula files can be found
+at~\url{https://github.com/rvente/TeXNet.ai/Dataset .} A graphical view of our
+data pipeline can be seen in Figure~\ref{datapipeline}.
 
-Minimal interactive web front-end where a user will be able to upload an image
-of a mathematical expression and receive the \LaTeX{} code associated with it. This would also serve as the platform for one of our demos.
+\section{Network Architecture}
 
-\section{Evaluation}
+Like much of our own, our network is based on \citeauthor{singh2018teaching}'s
+research. The general architecture has several essential features that we
+enumerate with brief explanations then proceed with detailed remarks on their
+relevance to our architecture.
 
-We will evaluate our models with a confusion matrix, Hamming distance, and
-statistic where appropriate for both - similar to the perplexity metric employed by the Harvard Paper that is a common metric in information theory and machine learning.
+\begin{description}
+  \item[Convolutional Neural Network (CNN)] Layers in our neural model learn
+  convolutions on pixel space that extracts meaningful information into a
+  compressed internal embedding, that is, a vector which has a dense encoding of
+  the contents of the input image.
+  \item[Recurrent Neural Network (RNN)] This allows for reasoning over time
+  because information from prior time-steps can factor into current time steps.
+  It accomplishes this by incorporating as input the output of previous layers.
+  \item[Long-Short Term Memory (LSTM)] Looseley speaking, the LSTM cells in the
+  neural network "learn what to forget and when to forget it." This aspect of
+  the architecture allows a particular subset of the previous layer's output to
+  be factored in dynamically based on what the LSTM cells have learned is
+  important.
+  \item[Attention machanism] Attention mechanisms allow for the network to mask
+  way, or "ignore" portions of the input image. The network can now use
+  information about past predictions to "keep track of where it's looking," allowing
+  for focused steps in the prediction process.
+\end{description}
+
+\subsection{Convolutional Neural Network}
+
+\subsection{Recurrent Neural Networks}
+
+At time $t$, the an RNN's layer $n$ takes as input the output of layer $n$ at
+time $t-1$. To train such a network using backpropagation, it is "unrolled" so
+as to emulate a feed-forward network, allowing the updates to propagate. The
+issue with an RNN alone is that memory of previous inputs quickly decay when
+moving from time-step to time-step. 
+
+\subsection{Long-Short Term Memory Configuration}
+
+To solve these issues, researchers use need a network to selectively add and
+remove inputs into the current state \parencite{zhang2019dive}. Dating back to
+1997, this LSTM architecture solves this using gates to control the flow of data
+during training and inference \parencite{zhang2019dive}. It takes 3 inputs,
+$c_{t-1}$ memory at time $t-1$, %TODO: continue
+
+\section{Training and Evaluation}
+
+\begin{figure}[h]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{histogram.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{scorehistogram.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{1.0\textwidth}
+		\includegraphics[scale=.425]{scorebylen.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+  \caption[Model]{This assessment is on the validation set $N=1,652$. (a) The mean length
+  is with a mean of  32.56 and standard deviation of 23.82. (b) BLEU Scores are
+  strongly concentrated on 1.0, with $\mu = 92.5$ and $\sigma =  23.81$.
+  (c) As expected, performance is inversely proportional to length, however on the longest
+  tokens, the model still perfomed at a respectable .82 BLEU score.}
+\end{figure}
+
+We trained the neural network on a Virtual Machine (VM) with an NVidia Tesla
+V100. Later, that platform became unavailable, so we migrated training to a VM
+with an NVidia Tesla P1 instead. Unfortunately, this change means we cannot make
+conclusions about the seconds to convergence between datasets of different size.
+
+For evaluation, we use Bilingual Evaluation Understudy (BLEU), the emerging
+standard among neural network solutions to the \textsc{im2latex} problem. BLEU
+is an automated metric for assessing machine translation accuracy
+\cite[1]{papineni2002bleu}. It is computed by comparing a target translation
+(ground truth) to the predicted sequence.
+
+We report 3 metrics: first we compute global BLEU score across all examples and
+then again with 2 splits. The first split evaluates performance by length in
+tokens of the target sequence and the next split evaluates performance based on
+the contents of the expression.
+
+We selected 3 "categories," chosen based on the qualities of the expression. For
+Group A, we select expressions containing matrices, arrays, and peice-wise
+functions (cases). For Group B, we select those containing fractions. We leave
+the rest of the data in Group C. We note that the sets not disjoint.
+\begin{figure}[h]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{scorebylenstacked.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{scorebyfrac.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+  \caption[Model]{(a) We generalize cases (peicewise functions), arrays,
+  matrices, column vectors here and evaluate performance on that set finding
+  $\mu = 0.85, \sigma=0.14$. Unsurprisingly, matrices were more challenging for
+  the model than general math, but matrices are underepresented at $N=291$ (b)
+  We match \texttt{frac} and \texttt{over} for fractions finding $\mu = 0.91,
+  \sigma =.11; N = 2897$.}
+\end{figure}
+
+From \citeauthor{papineni2002bleu}, BLEU score has a penalty for translations
+that are too long and those which are too short. The former case is handled
+implicitly, and the latter requires an explicit brevity penalty, $\text{BP}$
+computed as
+\begin{equation}
+ \text{BP} = \begin{cases}1 &\text{ if } c>r \\
+  e^{1-r/c} &\text{ otherwise }\end{cases}.
+\end{equation}
+with $r$ as the length of of the ground-truth sentence and $c$ as the length of
+the candidate sentence. Then, we have 
+\begin{equation}
+  \text{BLEU} = \text{BP} \exp\left( \sum_{i=1}^n w_i \log p_i \right),
+\end{equation}
+where $p_n$ is geometric mean of $n$-gram precisions from 1 to $N$ and $w_n$ is
+a parameter weight, such that $\sum_i w_i = 1$. \citeauthor{papineni2002bleu}
+used $w_n = 1/N$. \citeauthor{papineni2002bleu} show that BLEU score is
+predictive of human judgements, resulting in its widespread use in translation
+tasks.
+
+We use the same reformulation of this metric as \parencite{singh2018teaching}
+and \parencite{deng2016you}, the bigram BLEU (BLEU2) score computed with $w_1=w_2=.5$
+and $w_i = 0$ for $i>2$. The scores we report actually compare non-normalized
+target sequences to the normalized predicted sequences, resulting in a
+pessimistic predictive score because the network was not trained on this
+sequence. Despite this, the BLEU2 scores are satisfactory.
+
+\subsection{Limitations and Future work}
+
+% TODO: finish
+%lstm / variational autoencoder for infinite examples
+%gru for faster training and deepermodels
+%go deeper: cite the other references 
 
 \printbibliography{}
+
+\newpage
+\begin{appendix}
+  \section{Qualitative Analysis}
+  \subsection{Reducing Plain Text Matches}
+\begin{figure}[!h]
+  \qquad \textbf{The source code}
+  \begin{lstlisting}[escapechar=!, basicstyle=\footnotesize\ttfamily, numbers=left, firstnumber=1132]
+    The net flow vector $(1,1,0,\hdots,0)$ has previously been considered for the complete graph by Corteel, Kim, and M\'esz\'aros \cite{CKM}.  They used the Lidskii formula~\eqref{eq:lidskiivol} and constant term identities to derive the following product formula for the volume of $\mathcal{F}_{K_{n+1}}(1,1,0,\ldot     s,0)$.
+    It would be of interest to rederive this result using the refined Kostant constants.
+   \begin{theorem}[{\cite[Theorem 1.1]{CKM}}] \label{thm:volkn11}
+   Let $n\geq 1$. For the complete graph $K_{n+1}$,
+
+  \end{lstlisting}
+  \qquad \textbf{matched the regular expression} \verb|$(*.?)$| \textbf{with the string} 
+  \begin{lstlisting}[basicstyle=\footnotesize\ttfamily]
+  $. It would be of interest to rederive this result using the refined Kostant constants. \begin{theorem}[{\cite[Theorem 1.1]{CKM}}] \label{thm:volkn11} Let $    
+  \end{lstlisting}
+   \cprotect\caption{From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial} }\label{falsematch}
+
+
+\end{figure}
+This is a sample from a particular document whose source code induced a false
+match. Math code encased in dollar-signs has been deprecated in \LaTeX{}, but
+remains in wide use as an artifact from \TeX{}. It was deprecated to facilitate
+parsing: unlike \verb|\(| which indicates that the expression opens to the
+right, the dollar-sign gives no such indication. The reason the previous scripts
+were matching these plain-text strings was because matching all strings that
+start and end in dollar-signs doesn't preclude text from matching. In this case,
+the \verb|$| of the first line matched with the first \verb|$| of the 4th line. 
+
+\end{appendix}
 \end{document}
