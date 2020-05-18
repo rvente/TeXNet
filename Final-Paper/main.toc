@@ -5,30 +5,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Debut}{2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}\input main-1.cpt\relax }{2}% 
+\contentsline {subsection}{\numberline {1.2}\input main-1.cpt\relax }{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Architectural Designs}{2}% 
+\contentsline {subsection}{\numberline {1.3}Architectural Designs}{3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Corpus Harvesting}{3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Challenges}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Innovations}{3}% 
+\contentsline {subsection}{\numberline {2.2}Innovations}{4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Product}{4}% 
+\contentsline {subsection}{\numberline {2.3}Product}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Network Architecture}{4}% 
+\contentsline {section}{\numberline {3}Network Architecture}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Convolutional Neural Network}{6}% 
+\contentsline {subsection}{\numberline {3.1}Convolutional Neural Network}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{6}% 
+\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{6}% 
+\contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Training and Evaluation}{6}% 
+\contentsline {section}{\numberline {4}Training and Evaluation}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Limitations and Future work}{8}% 
+\contentsline {subsection}{\numberline {4.1}Limitations and Future work}{10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Qualitative Analysis}{9}% 
+\contentsline {section}{\numberline {A}Qualitative Analysis}{12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Reducing Plain Text Matches}{9}% 
+\contentsline {subsection}{\numberline {A.1}Reducing Plain Text Matches}{12}% 

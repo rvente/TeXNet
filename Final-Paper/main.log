@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.6)  18 MAY 2020 18:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.6)  18 MAY 2020 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,8 +7,8 @@ entering extended mode
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -700,23 +700,23 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(81.30374pt, 451.68752pt, 81.30374pt)
+* v-part:(T,H,B)=(81.30374pt, 632.3625pt, 81.30374pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=451.68752pt
+* \textheight=632.3625pt
+* \oddsidemargin=9.03375pt
+* \evensidemargin=9.03375pt
+* \topmargin=-27.96625pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -779,13 +779,13 @@ Package biblatex Info: Automatic encoding selection.
 \openout5 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 85.
 Package biblatex Info: Reference segment=0 on input line 85.
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 8
 7.
+
 (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -795,7 +795,7 @@ LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <17.28> not available
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <20.74> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 87.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
 7.
@@ -810,11 +810,11 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 87.
+(Font)              <14.4> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 87.
+(Font)              <10> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 87.
+(Font)              <7> on input line 87.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
 
 
@@ -826,254 +826,133 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./main.toc)
+) (./main.toc [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 110.
-
-
-LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 110.
-
-
-LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 115.
-
-
-LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 119.
-
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 119.
+
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \openout3 = `main-1.cpt'.
 
  (./main-1.cpt
-LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <12> not available
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 1.
-)
-
-LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 131.
-
-
-LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 148.
-
-
-LaTeX Warning: Citation 'genthial2016image' on page 2 undefined on input line 1
-49.
-
-
-LaTeX Warning: Citation 'wang2019translating' on page 2 undefined on input line
- 150.
-
-
-LaTeX Warning: Citation 'bender2019learning' on page 2 undefined on input line 
-151.
-
+) [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 161.
+(Font)              <12> on input line 161.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 161.
+(Font)              <8> on input line 161.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 161.
-[2]
-
-LaTeX Warning: Citation 'deng2016you' on page 3 undefined on input line 173.
-
-
-LaTeX Warning: Citation 'singh2018teaching' on page 3 undefined on input line 1
-79.
-
-
-LaTeX Warning: Citation 'singh2018teaching' on page 3 undefined on input line 1
-84.
-
-
-Overfull \hbox (6.77464pt too wide) in paragraph at lines 179--186
-\OT1/lmr/m/n/10 To start, we fol-low closely in the foot-steps of []. Af-ter pr
-e-pro-cess-ing steps on \OT1/lmtt/m/n/10 im2latex100k\OT1/lmr/m/n/10 ,
- []
-
-
-LaTeX Warning: Citation 'deng2016you' on page 3 undefined on input line 207.
-
-[3]
-<assets/harvest.pdf, id=25, 210.49997pt x 143.58517pt>
+(Font)              <6> on input line 161.
+ [3] [4]
+<assets/harvest.pdf, id=26, 210.49997pt x 143.58517pt>
 File: assets/harvest.pdf Graphic file (type pdf)
 <use assets/harvest.pdf>
 Package pdftex.def Info: assets/harvest.pdf  used on input line 216.
 (pdftex.def)             Requested size: 420.9989pt x 287.16962pt.
 \openout3 = `main-2.cpt'.
 
- (./main-2.cpt) (./main-2.cpt)
 
-LaTeX Warning: Citation 'deng2016you' on page 4 undefined on input line 232.
-
-
-LaTeX Warning: Citation 'bender2019learning' on page 4 undefined on input line 
-239.
-
-
-LaTeX Warning: Citation 'deng2016you' on page 4 undefined on input line 243.
-
-
-LaTeX Warning: Citation 'singh2018teaching' on page 4 undefined on input line 2
-58.
-
-[4] [5 <./assets/harvest.pdf>]
-
-LaTeX Warning: Citation 'zhang2019dive' on page 6 undefined on input line 295.
-
-
-LaTeX Warning: Citation 'zhang2019dive' on page 6 undefined on input line 297.
-
-<assets/histogram.pdf, id=46, 433.62pt x 289.08pt>
+(./main-2.cpt) (./main-2.cpt) [5] [6 <./assets/harvest.pdf>] [7]
+<assets/histogram.pdf, id=51, 433.62pt x 289.08pt>
 File: assets/histogram.pdf Graphic file (type pdf)
 <use assets/histogram.pdf>
 Package pdftex.def Info: assets/histogram.pdf  used on input line 304.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
-<assets/scorehistogram.pdf, id=47, 433.62pt x 289.08pt>
+<assets/scorehistogram.pdf, id=52, 433.62pt x 289.08pt>
 File: assets/scorehistogram.pdf Graphic file (type pdf)
 <use assets/scorehistogram.pdf>
 Package pdftex.def Info: assets/scorehistogram.pdf  used on input line 309.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
-<assets/scorebylen.pdf, id=48, 433.62pt x 289.08pt>
+<assets/scorebylen.pdf, id=53, 433.62pt x 289.08pt>
 File: assets/scorebylen.pdf Graphic file (type pdf)
 <use assets/scorebylen.pdf>
 Package pdftex.def Info: assets/scorebylen.pdf  used on input line 315.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 303--328
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 303--328
 []$[]$ $[]$
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation 'papineni2002bleu' on page 6 undefined on input line 33
-9.
-
-[6]
-<assets/scorebylenstacked.pdf, id=55, 433.62pt x 289.08pt>
+[8]
+<assets/scorebylenstacked.pdf, id=60, 433.62pt x 289.08pt>
 File: assets/scorebylenstacked.pdf Graphic file (type pdf)
 <use assets/scorebylenstacked.pdf>
 Package pdftex.def Info: assets/scorebylenstacked.pdf  used on input line 353.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
-<assets/scorebyfrac.pdf, id=56, 433.62pt x 289.08pt>
+<assets/scorebyfrac.pdf, id=61, 433.62pt x 289.08pt>
 File: assets/scorebyfrac.pdf Graphic file (type pdf)
 <use assets/scorebyfrac.pdf>
 Package pdftex.def Info: assets/scorebyfrac.pdf  used on input line 359.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
 
-Overfull \hbox (2.2222pt too wide) in paragraph at lines 352--367
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 352--367
 []$[]$ $[]$ 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation 'papineni2002bleu' on page 7 undefined on input line 37
-0.
-
-
-LaTeX Warning: Citation 'papineni2002bleu' on page 7 undefined on input line 38
-4.
-
-
-LaTeX Warning: Citation 'papineni2002bleu' on page 7 undefined on input line 38
-5.
-
-
-LaTeX Warning: Citation 'singh2018teaching' on page 7 undefined on input line 3
-89.
-
-
-LaTeX Warning: Citation 'deng2016you' on page 7 undefined on input line 390.
-
-
-LaTeX Warning: Citation 'singh2018teaching' on page 7 undefined on input line 4
-09.
-
-[7]
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+[9]
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 416.
-
-
-LaTeX Warning: Empty bibliography on input line 438.
-
-[8]
+ [10] [11]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 447.
 \openout3 = `main-3.cpt'.
 
- (./main-3.cpt
-
-LaTeX Warning: Citation 'benedetti2018combinatorial' on page 9 undefined on inp
-ut line 1.
-
-) (./main-3.cpt
-
-LaTeX Warning: Citation 'benedetti2018combinatorial' on page 9 undefined on inp
-ut line 1.
-
-)
+ (./main-3.cpt) (./main-3.cpt)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9] [10 <./assets/histogram.pdf> <./assets/scorehistogram.pdf> <./assets/scoreb
-ylen.pdf>] [11 <./assets/scorebylenstacked.pdf> <./assets/scorebyfrac.pdf>]
+[12] [13 <./assets/histogram.pdf> <./assets/scorehistogram.pdf> <./assets/score
+bylen.pdf>] [14 <./assets/scorebylenstacked.pdf> <./assets/scorebyfrac.pdf>]
 (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15926 strings out of 492167
- 261222 string characters out of 6131559
- 820445 words of memory out of 5000000
- 20020 multiletter control sequences out of 15000+600000
- 65018 words of font info for 61 fonts, out of 8000000 for 9000
+ 15972 strings out of 492167
+ 262627 string characters out of 6131559
+ 820738 words of memory out of 5000000
+ 20064 multiletter control sequences out of 15000+600000
+ 69343 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,10n,56p,877b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dis
-t/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm
--rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf
--dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/l
+ 48i,10n,64p,877b,1705s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
+t/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-m
+athex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/l
 m/lm-rmsc.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></
-usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi
-8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-
-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
-lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/
-texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/lm/lmr9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/
-share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/
-type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pf
-b></usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
-/lmtt8.pfb>
-Output written on main.pdf (11 pages, 521928 bytes).
+texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1
+/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/f
+onts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
+-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public
+/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type
+1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/f
+onts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (14 pages, 455154 bytes).
 PDF statistics:
- 225 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
