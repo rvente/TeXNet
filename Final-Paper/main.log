@@ -1,0 +1,1079 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.6)  18 MAY 2020 18:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2019-10-01> patch level 1
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/10/15 3.35 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/10/15 3.35 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/10/15 3.35 Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen111
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count92
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2019/04/01 v2.17c AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen112
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen113
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks20
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks21
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks22
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+)
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
+\LTleft=\skip46
+\LTright=\skip47
+\LTpre=\skip48
+\LTpost=\skip49
+\LTchunksize=\count105
+\LTcapwidth=\dimen121
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count106
+\LT@rows=\count107
+\c@LT@tables=\count108
+\c@LT@chunks=\count109
+\LT@p@ftn=\toks24
+) (./booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen122
+\lightrulewidth=\dimen123
+\cmidrulewidth=\dimen124
+\belowrulesep=\dimen125
+\belowbottomsep=\dimen126
+\aboverulesep=\dimen127
+\abovetopsep=\dimen128
+\cmidrulesep=\dimen129
+\cmidrulekern=\dimen130
+\defaultaddspace=\dimen131
+\@cmidla=\count110
+\@cmidlb=\count111
+\@aboverulesep=\dimen132
+\@belowrulesep=\dimen133
+\@thisruleclass=\count112
+\@lastruleclass=\count113
+\@thisrulewidth=\dimen134
+)
+(/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count114
+\c@@ppsavesec=\count115
+\c@@ppsaveapp=\count116
+)
+(/usr/share/texmf-dist/tex/latex/cprotect/cprotect.sty
+Package: cprotect 2011/01/27 v1.0e (Bruno Le Floch)
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+\CPT@WriteOut=\write3
+\c@CPT@WriteCount=\count117
+\c@CPT@numB=\count118
+\CPT@commandatend@toks=\toks25
+)
+(/usr/share/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2019/09/21 v0.5n Insert pages of external PDF documents (AM)
+
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count119
+\calc@Bcount=\count120
+\calc@Adimen=\dimen135
+\calc@Bdimen=\dimen136
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count121
+\calc@Cskip=\skip52
+)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
+)
+\AM@pagewidth=\dimen139
+\AM@pageheight=\dimen140
+
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2019/09/21 v0.5n Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box33
+\AM@global@opts=\toks26
+\AM@toc@title=\toks27
+\c@AM@survey=\count122
+\AM@templatesizebox=\box34
+)
+(/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen141
+\captionmargin@=\dimen142
+\captionwidth=\dimen143
+\caption@tempdima=\dimen144
+\caption@indent=\dimen145
+\caption@parindent=\dimen146
+\caption@hangindent=\dimen147
+)
+\c@caption@flags=\count123
+\c@ContinuedFloat=\count124
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+))
+\c@subfigure=\count125
+\c@subtable=\count126
+)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
+
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count127
+)
+\csq@reset=\count128
+\csq@gtype=\count129
+\csq@glevel=\count130
+\csq@qlevel=\count131
+\csq@maxlvl=\count132
+\csq@tshold=\count133
+\csq@ltx@everypar=\toks28
+
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019/05/10 v5.2e csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+)
+Package csquotes Info: Allocating character ".
+
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count134
+\lst@gtempboxa=\box35
+\lst@token=\toks29
+\lst@length=\count135
+\lst@currlwidth=\dimen148
+\lst@column=\count136
+\lst@pos=\count137
+\lst@lostspace=\dimen149
+\lst@width=\dimen150
+\lst@newlines=\count138
+\lst@lineno=\count139
+\lst@maxwidth=\dimen151
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count140
+\lst@skipnumbers=\count141
+\lst@framebox=\box36
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/08/31 v3.13a programmable bibliographies (PK/MW)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count142
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count143
+\c@listtotal=\count144
+\c@listcount=\count145
+\c@liststart=\count146
+\c@liststop=\count147
+\c@citecount=\count148
+\c@citetotal=\count149
+\c@multicitecount=\count150
+\c@multicitetotal=\count151
+\c@instcount=\count152
+\c@maxnames=\count153
+\c@minnames=\count154
+\c@maxitems=\count155
+\c@minitems=\count156
+\c@citecounter=\count157
+\c@maxcitecounter=\count158
+\c@savedcitecounter=\count159
+\c@uniquelist=\count160
+\c@uniquename=\count161
+\c@refsection=\count162
+\c@refsegment=\count163
+\c@maxextratitle=\count164
+\c@maxextratitleyear=\count165
+\c@maxextraname=\count166
+\c@maxextradate=\count167
+\c@maxextraalpha=\count168
+\c@abbrvpenalty=\count169
+\c@highnamepenalty=\count170
+\c@lownamepenalty=\count171
+\c@maxparens=\count172
+\c@parenlevel=\count173
+\blx@tempcnta=\count174
+\blx@tempcntb=\count175
+\blx@tempcntc=\count176
+\blx@maxsection=\count177
+\blx@maxsegment@0=\count178
+\blx@notetype=\count179
+\blx@parenlevel@text=\count180
+\blx@parenlevel@foot=\count181
+\blx@sectionciteorder@0=\count182
+\blx@entrysetcounter=\count183
+\labelnumberwidth=\skip53
+\labelalphawidth=\skip54
+\biblabelsep=\skip55
+\bibitemsep=\skip56
+\bibnamesep=\skip57
+\bibinitsep=\skip58
+\bibparsep=\skip59
+\bibhang=\skip60
+\blx@bcfin=\read1
+\blx@bcfout=\write5
+\blx@langwohyphens=\language85
+\c@mincomprange=\count184
+\c@maxcomprange=\count185
+\c@mincompwidth=\count186
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/08/31 v3.13a biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex citestyle data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count187
+\c@savedafterword=\count188
+\c@annotator=\count189
+\c@savedannotator=\count190
+\c@author=\count191
+\c@savedauthor=\count192
+\c@bookauthor=\count193
+\c@savedbookauthor=\count194
+\c@commentator=\count195
+\c@savedcommentator=\count196
+\c@editor=\count197
+\c@savededitor=\count198
+\c@editora=\count199
+\c@savededitora=\count266
+\c@editorb=\count267
+\c@savededitorb=\count268
+\c@editorc=\count269
+\c@savededitorc=\count270
+\c@foreword=\count271
+\c@savedforeword=\count272
+\c@holder=\count273
+\c@savedholder=\count274
+\c@introduction=\count275
+\c@savedintroduction=\count276
+\c@namea=\count277
+\c@savednamea=\count278
+\c@nameb=\count279
+\c@savednameb=\count280
+\c@namec=\count281
+\c@savednamec=\count282
+\c@translator=\count283
+\c@savedtranslator=\count284
+\c@shortauthor=\count285
+\c@savedshortauthor=\count286
+\c@shorteditor=\count287
+\c@savedshorteditor=\count288
+\c@labelname=\count289
+\c@savedlabelname=\count290
+\c@institution=\count291
+\c@savedinstitution=\count292
+\c@lista=\count293
+\c@savedlista=\count294
+\c@listb=\count295
+\c@savedlistb=\count296
+\c@listc=\count297
+\c@savedlistc=\count298
+\c@listd=\count299
+\c@savedlistd=\count300
+\c@liste=\count301
+\c@savedliste=\count302
+\c@listf=\count303
+\c@savedlistf=\count304
+\c@location=\count305
+\c@savedlocation=\count306
+\c@organization=\count307
+\c@savedorganization=\count308
+\c@origlocation=\count309
+\c@savedoriglocation=\count310
+\c@origpublisher=\count311
+\c@savedorigpublisher=\count312
+\c@publisher=\count313
+\c@savedpublisher=\count314
+\c@language=\count315
+\c@savedlanguage=\count316
+\c@origlanguage=\count317
+\c@savedoriglanguage=\count318
+\c@pageref=\count319
+\c@savedpageref=\count320
+\shorthandwidth=\skip61
+\shortjournalwidth=\skip62
+\shortserieswidth=\skip63
+\shorttitlewidth=\skip64
+\shortauthorwidth=\skip65
+\shorteditorwidth=\skip66
+\locallabelnumberwidth=\skip67
+\locallabelalphawidth=\skip68
+\localshorthandwidth=\skip69
+\localshortjournalwidth=\skip70
+\localshortserieswidth=\skip71
+\localshorttitlewidth=\skip72
+\localshortauthorwidth=\skip73
+\localshorteditorwidth=\skip74
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
+\c@textcitecount=\count321
+\c@textcitetotal=\count322
+\c@textcitemaxnames=\count323
+\c@biburlbigbreakpenalty=\count324
+\c@biburlbreakpenalty=\count325
+\c@biburlnumpenalty=\count326
+\c@biburlucpenalty=\count327
+\c@biburllcpenalty=\count328
+\biburlbigskip=\muskip12
+\biburlnumskip=\muskip13
+\biburlucskip=\muskip14
+\biburllcskip=\muskip15
+\c@smartand=\count329
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count330
+\c@bbx:relatedtotal=\count331
+))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx
+File: ieee.cbx 2019/06/19 v1.3a biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2019/08/31 v3.13a biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count332
+\c@cbx@tempcntb=\count333
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/share/texmf-dist/tex/latex/changepage/chngpage.sty
+Package: chngpage 2009/10/20 v1.2b change page layout
+\c@cp@cnt=\count334
+\c@cp@tempcnt=\count335
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+5.
+
+(/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box37
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count336
+\scratchdimen=\dimen152
+\scratchbox=\box38
+\nofMPsegments=\count337
+\nofMParguments=\count338
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count339
+\MPscratchDim=\dimen153
+\MPnumerator=\count340
+\makeMPintoPDFobject=\count341
+\everyMPtoPDFconversion=\toks31
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+(/usr/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package csquotes Info: Making character " active on input line 85.
+\c@lstlisting=\count342
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' not found.
+
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 85.
+Package biblatex Info: Reference segment=0 on input line 85.
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 8
+7.
+(/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+87.
+
+(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <17.28> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 87.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+7.
+
+(/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+87.
+
+(/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 87.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 87.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./main.toc)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 110.
+
+
+LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 110.
+
+
+LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 115.
+
+
+LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 119.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+119.
+(/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+\openout3 = `main-1.cpt'.
+
+ (./main-1.cpt
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 1.
+)
+
+LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 131.
+
+
+LaTeX Warning: Citation 'deng2016you' on page 2 undefined on input line 148.
+
+
+LaTeX Warning: Citation 'genthial2016image' on page 2 undefined on input line 1
+49.
+
+
+LaTeX Warning: Citation 'wang2019translating' on page 2 undefined on input line
+ 150.
+
+
+LaTeX Warning: Citation 'bender2019learning' on page 2 undefined on input line 
+151.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 161.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 161.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 161.
+[2]
+
+LaTeX Warning: Citation 'deng2016you' on page 3 undefined on input line 173.
+
+
+LaTeX Warning: Citation 'singh2018teaching' on page 3 undefined on input line 1
+79.
+
+
+LaTeX Warning: Citation 'singh2018teaching' on page 3 undefined on input line 1
+84.
+
+
+Overfull \hbox (6.77464pt too wide) in paragraph at lines 179--186
+\OT1/lmr/m/n/10 To start, we fol-low closely in the foot-steps of []. Af-ter pr
+e-pro-cess-ing steps on \OT1/lmtt/m/n/10 im2latex100k\OT1/lmr/m/n/10 ,
+ []
+
+
+LaTeX Warning: Citation 'deng2016you' on page 3 undefined on input line 207.
+
+[3]
+<assets/harvest.pdf, id=25, 210.49997pt x 143.58517pt>
+File: assets/harvest.pdf Graphic file (type pdf)
+<use assets/harvest.pdf>
+Package pdftex.def Info: assets/harvest.pdf  used on input line 216.
+(pdftex.def)             Requested size: 420.9989pt x 287.16962pt.
+\openout3 = `main-2.cpt'.
+
+ (./main-2.cpt) (./main-2.cpt)
+
+LaTeX Warning: Citation 'deng2016you' on page 4 undefined on input line 232.
+
+
+LaTeX Warning: Citation 'bender2019learning' on page 4 undefined on input line 
+239.
+
+
+LaTeX Warning: Citation 'deng2016you' on page 4 undefined on input line 243.
+
+
+LaTeX Warning: Citation 'singh2018teaching' on page 4 undefined on input line 2
+58.
+
+[4] [5 <./assets/harvest.pdf>]
+
+LaTeX Warning: Citation 'zhang2019dive' on page 6 undefined on input line 295.
+
+
+LaTeX Warning: Citation 'zhang2019dive' on page 6 undefined on input line 297.
+
+<assets/histogram.pdf, id=46, 433.62pt x 289.08pt>
+File: assets/histogram.pdf Graphic file (type pdf)
+<use assets/histogram.pdf>
+Package pdftex.def Info: assets/histogram.pdf  used on input line 304.
+(pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
+<assets/scorehistogram.pdf, id=47, 433.62pt x 289.08pt>
+File: assets/scorehistogram.pdf Graphic file (type pdf)
+<use assets/scorehistogram.pdf>
+Package pdftex.def Info: assets/scorehistogram.pdf  used on input line 309.
+(pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
+<assets/scorebylen.pdf, id=48, 433.62pt x 289.08pt>
+File: assets/scorebylen.pdf Graphic file (type pdf)
+<use assets/scorebylen.pdf>
+Package pdftex.def Info: assets/scorebylen.pdf  used on input line 315.
+(pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 303--328
+[]$[]$ $[]$
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation 'papineni2002bleu' on page 6 undefined on input line 33
+9.
+
+[6]
+<assets/scorebylenstacked.pdf, id=55, 433.62pt x 289.08pt>
+File: assets/scorebylenstacked.pdf Graphic file (type pdf)
+<use assets/scorebylenstacked.pdf>
+Package pdftex.def Info: assets/scorebylenstacked.pdf  used on input line 353.
+(pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
+<assets/scorebyfrac.pdf, id=56, 433.62pt x 289.08pt>
+File: assets/scorebyfrac.pdf Graphic file (type pdf)
+<use assets/scorebyfrac.pdf>
+Package pdftex.def Info: assets/scorebyfrac.pdf  used on input line 359.
+(pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 352--367
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation 'papineni2002bleu' on page 7 undefined on input line 37
+0.
+
+
+LaTeX Warning: Citation 'papineni2002bleu' on page 7 undefined on input line 38
+4.
+
+
+LaTeX Warning: Citation 'papineni2002bleu' on page 7 undefined on input line 38
+5.
+
+
+LaTeX Warning: Citation 'singh2018teaching' on page 7 undefined on input line 3
+89.
+
+
+LaTeX Warning: Citation 'deng2016you' on page 7 undefined on input line 390.
+
+
+LaTeX Warning: Citation 'singh2018teaching' on page 7 undefined on input line 4
+09.
+
+[7]
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 416.
+
+
+LaTeX Warning: Empty bibliography on input line 438.
+
+[8]
+\openout3 = `main-3.cpt'.
+
+ (./main-3.cpt
+
+LaTeX Warning: Citation 'benedetti2018combinatorial' on page 9 undefined on inp
+ut line 1.
+
+) (./main-3.cpt
+
+LaTeX Warning: Citation 'benedetti2018combinatorial' on page 9 undefined on inp
+ut line 1.
+
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <./assets/histogram.pdf> <./assets/scorehistogram.pdf> <./assets/scoreb
+ylen.pdf>] [11 <./assets/scorebylenstacked.pdf> <./assets/scorebyfrac.pdf>]
+(./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 15926 strings out of 492167
+ 261222 string characters out of 6131559
+ 820445 words of memory out of 5000000
+ 20020 multiletter control sequences out of 15000+600000
+ 65018 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 45i,10n,56p,877b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dis
+t/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm
+-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf
+-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/l
+m/lm-rmsc.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
+lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/
+texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></
+usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fo
+nts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi
+8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-
+dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
+lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/
+texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/lm/lmr9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/
+share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/
+type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pf
+b></usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
+/lmtt8.pfb>
+Output written on main.pdf (11 pages, 521928 bytes).
+PDF statistics:
+ 225 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

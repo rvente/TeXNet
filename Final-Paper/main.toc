@@ -25,7 +25,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Training and Evaluation}{7}% 
+\contentsline {section}{\numberline {4}Training and Evaluation}{6}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Limitations and Future work}{8}% 
 \defcounter {refsection}{0}\relax 

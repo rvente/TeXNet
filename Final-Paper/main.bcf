@@ -2154,8 +2154,9 @@
     <bcf:citekey order="23">papineni2002bleu</bcf:citekey>
     <bcf:citekey order="24">singh2018teaching</bcf:citekey>
     <bcf:citekey order="25">deng2016you</bcf:citekey>
-    <bcf:citekey order="26">benedetti2018combinatorial</bcf:citekey>
+    <bcf:citekey order="26">singh2018teaching</bcf:citekey>
     <bcf:citekey order="27">benedetti2018combinatorial</bcf:citekey>
+    <bcf:citekey order="28">benedetti2018combinatorial</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
