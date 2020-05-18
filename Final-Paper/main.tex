@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[doublespacing]{setspace}
@@ -142,7 +143,7 @@ even specified the sequence-to-sequence attention machanism that makes these
 models suitable for the problem, but there have been a wide variety in the
 particular architectures of the neural models.
 
-% TODO: summarize architecture evolution
+% TODO: summarize architecture evolution for all 4 authors
 
 \citeauthor{deng2016you}
 \citeauthor{genthial2016image}
@@ -233,7 +234,7 @@ map to the same output image, so we use the same normalization with Khan
 Academy's \KaTeX{} as they did in their scripts. Like \texttt{pandoc}, \KaTeX{}
 parses the input sequences into an abstract syntax tree and rebuilds the
 expressions without disrupting
-semantics. % TODO: everyone got better results with this
+semantics. 
 
 \citeauthor[5]{bender2019learning} note that their \textsc{im2latex} model struggled
 very short sequences, and performed better on those that were slightly longer.
