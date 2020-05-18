@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.6)  18 MAY 2020 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.6)  18 MAY 2020 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -81,6 +81,13 @@ File: babel.def 2019/10/15 3.35 Babel common definitions
 (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
 (/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -115,6 +122,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 9.
+
+
+(/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -674,24 +687,19 @@ File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 
-(/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -771,7 +779,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package csquotes Info: Making character " active on input line 85.
+Package csquotes Info: Making character " active on input line 93.
 \c@lstlisting=\count342
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -781,47 +789,45 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 85.
-Package biblatex Info: Reference segment=0 on input line 85.
-LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 8
-7.
+Package biblatex Info: Reference section=0 on input line 93.
+Package biblatex Info: Reference segment=0 on input line 93.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
+5.
 
-(/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-87.
-
-(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <20.74> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 87.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
+5.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+95.
+
+(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-87.
+95.
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 87.
+(Font)              <14.4> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 87.
+(Font)              <10> on input line 95.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 87.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+(Font)              <7> on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -832,29 +838,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-119.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+27.
 
-(/usr/share/texmf-dist/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \openout3 = `main-1.cpt'.
 
  (./main-1.cpt
-LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/lmr/bx/sc' in size <14.4> not available
+(Font)              Font shape `T1/cmr/bx/sc' tried instead on input line 1.
 ) [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 161.
+(Font)              <12> on input line 169.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 161.
+(Font)              <8> on input line 169.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 161.
+(Font)              <6> on input line 169.
  [3] [4]
 <assets/harvest.pdf, id=26, 210.49997pt x 143.58517pt>
 File: assets/harvest.pdf Graphic file (type pdf)
 <use assets/harvest.pdf>
-Package pdftex.def Info: assets/harvest.pdf  used on input line 216.
+Package pdftex.def Info: assets/harvest.pdf  used on input line 224.
 (pdftex.def)             Requested size: 420.9989pt x 287.16962pt.
 \openout3 = `main-2.cpt'.
 
@@ -863,20 +869,20 @@ Package pdftex.def Info: assets/harvest.pdf  used on input line 216.
 <assets/histogram.pdf, id=51, 433.62pt x 289.08pt>
 File: assets/histogram.pdf Graphic file (type pdf)
 <use assets/histogram.pdf>
-Package pdftex.def Info: assets/histogram.pdf  used on input line 304.
+Package pdftex.def Info: assets/histogram.pdf  used on input line 312.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
 <assets/scorehistogram.pdf, id=52, 433.62pt x 289.08pt>
 File: assets/scorehistogram.pdf Graphic file (type pdf)
 <use assets/scorehistogram.pdf>
-Package pdftex.def Info: assets/scorehistogram.pdf  used on input line 309.
+Package pdftex.def Info: assets/scorehistogram.pdf  used on input line 317.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
 <assets/scorebylen.pdf, id=53, 433.62pt x 289.08pt>
 File: assets/scorebylen.pdf Graphic file (type pdf)
 <use assets/scorebylen.pdf>
-Package pdftex.def Info: assets/scorebylen.pdf  used on input line 315.
+Package pdftex.def Info: assets/scorebylen.pdf  used on input line 323.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 303--328
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 311--336
 []$[]$ $[]$
  []
 
@@ -884,18 +890,18 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 303--328
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8]
-<assets/scorebylenstacked.pdf, id=60, 433.62pt x 289.08pt>
+<assets/scorebylenstacked.pdf, id=62, 433.62pt x 289.08pt>
 File: assets/scorebylenstacked.pdf Graphic file (type pdf)
 <use assets/scorebylenstacked.pdf>
-Package pdftex.def Info: assets/scorebylenstacked.pdf  used on input line 353.
+Package pdftex.def Info: assets/scorebylenstacked.pdf  used on input line 361.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
-<assets/scorebyfrac.pdf, id=61, 433.62pt x 289.08pt>
+<assets/scorebyfrac.pdf, id=63, 433.62pt x 289.08pt>
 File: assets/scorebyfrac.pdf Graphic file (type pdf)
 <use assets/scorebyfrac.pdf>
-Package pdftex.def Info: assets/scorebyfrac.pdf  used on input line 359.
+Package pdftex.def Info: assets/scorebyfrac.pdf  used on input line 367.
 (pdftex.def)             Requested size: 184.28937pt x 122.85957pt.
 
-Overfull \hbox (2.61105pt too wide) in paragraph at lines 352--367
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 360--375
 []$[]$ $[]$ 
  []
 
@@ -903,14 +909,20 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 352--367
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
+LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 4
+24.
+ (/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 416.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 424.
  [10] [11]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 447.
+(Font)              <5> on input line 455.
 \openout3 = `main-3.cpt'.
 
- (./main-3.cpt) (./main-3.cpt)
+ (./main-3.cpt)
+(./main-3.cpt)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -922,37 +934,37 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15972 strings out of 492167
- 262627 string characters out of 6131559
- 820738 words of memory out of 5000000
- 20064 multiletter control sequences out of 15000+600000
- 69343 words of font info for 67 fonts, out of 8000000 for 9000
+ 16216 strings out of 492167
+ 264917 string characters out of 6131559
+ 820802 words of memory out of 5000000
+ 20295 multiletter control sequences out of 15000+600000
+ 85756 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,10n,64p,877b,1705s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,10n,64p,877b,1711s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
-t/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-m
-athex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/l
-m/lm-rmsc.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
-lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1
-/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/f
-onts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr
-10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
--dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type1/public
-/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type
-1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf-dist/f
-onts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (14 pages, 455154 bytes).
+t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-
+super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></us
+r/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi
+10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texm
+f-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf-dist/fonts/type
+1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></
+usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fo
+nts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt
+10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texm
+f-dist/fonts/type1/public/cm-super/sfxc1440.pfb>
+Output written on main.pdf (14 pages, 441991 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 223 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
