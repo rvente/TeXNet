@@ -40,7 +40,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labelnamespec</bcf:key>
@@ -2132,6 +2132,7 @@
     <bcf:citekey order="1">deng2016you</bcf:citekey>
     <bcf:citekey order="2">deng2016you</bcf:citekey>
     <bcf:citekey order="3">deng2016you</bcf:citekey>
+    <bcf:citekey order="4">deng2016you</bcf:citekey>
     <bcf:citekey order="5">deng2016you</bcf:citekey>
     <bcf:citekey order="6">deng2016you</bcf:citekey>
     <bcf:citekey order="7">genthial2016image</bcf:citekey>
@@ -2150,8 +2151,11 @@
     <bcf:citekey order="20">papineni2002bleu</bcf:citekey>
     <bcf:citekey order="21">papineni2002bleu</bcf:citekey>
     <bcf:citekey order="22">papineni2002bleu</bcf:citekey>
-    <bcf:citekey order="23">benedetti2018combinatorial</bcf:citekey>
-    <bcf:citekey order="24">benedetti2018combinatorial</bcf:citekey>
+    <bcf:citekey order="23">papineni2002bleu</bcf:citekey>
+    <bcf:citekey order="24">singh2018teaching</bcf:citekey>
+    <bcf:citekey order="25">deng2016you</bcf:citekey>
+    <bcf:citekey order="26">benedetti2018combinatorial</bcf:citekey>
+    <bcf:citekey order="27">benedetti2018combinatorial</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

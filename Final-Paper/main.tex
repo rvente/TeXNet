@@ -11,6 +11,9 @@
 \usepackage{cprotect}
 \usepackage{comment}
 \usepackage{pdfpages}
+\usepackage{subcaption}
+
+\graphicspath{ {assets/} }
 
 \usepackage[autostyle]{csquotes}
 \MakeOuterQuote{"}
@@ -22,16 +25,16 @@
   breaklines=true
 }
  
+\setcounter{tocdepth}{1}
+
 \usepackage[margin=.5cm]{caption}
 % \captionsetup{margin=3cm} inside a figure
 % to change only that figure
  
  \usepackage[
  backend=biber,
- style=alphabetic,
  citestyle=ieee
  ]{biblatex}
-% \usepackage[backend=biber]{biblatex-chicago}
 \addbibresource{main.bib}
 
 
@@ -78,6 +81,7 @@
   examples from source files hoping to minimize these biases.
 \end{abstract}
 
+\tableofcontents
 \section{Previous Work}
 
 \subsection{Debut}
@@ -86,7 +90,7 @@ The prospect of accurately transcribing mathematical expression into a markup
 representation is enticing because it opens the doors for bringing new life to
 old mathematical texts or those for which the source code is unavailable.
 
-A Harvard project called \citetitle{deng2016you} by~\citeauthor{deng2016you}
+\citetitle{deng2016you} by~\citeauthor{deng2016you}
 documents strategies for machine translation of mathematical notation using an
 attention-based encoder-decoder neural model. Notably, the researchers were
 interested in the influence of markup alone on the efficacy of a model ---
@@ -95,7 +99,7 @@ without providing explicit information about underlying grammars
 documenting the grammar to allow a conventional character recognition model to
 translate the expression.
 
-Introduced in 2016 by~\citeauthor{}{deng2016you}, the \texttt{im2latex100k} dataset has
+Introduced in 2016 by~\citeauthor{deng2016you}, the \texttt{im2latex100k} dataset has
 facilitated research by reducing the overhead of heavy pre-processing. Using
 this dataset, other solutions to \textsc{im2latex} have seen substantial
 progress. Recently, it has come under question as a possible \textit{bottleneck} for
@@ -144,7 +148,8 @@ languages. From the theoretical standpoint, it may contain loops and recursion,
 classifying it as a recursively enumerable language. As such, no \LaTeX{} parser
 is guaranteed to terminate, and regular expressions alone lack the expressive
 power to extract all cases of a particular pattern. Practically, we mostly
-needed to contend with macro expansion. This means that the original scripts of
+needed to contend with macro expansion whereby commands used as contractions
+needed expanding into their definition. This means that the original scripts of
 \cite{deng2016you} required substantial changes before being suitable for our
 purposes.
 
@@ -186,8 +191,8 @@ the final set, eliminating one possible source of bias in the dataset.
 
 
 %\begin{figure}[!h]
-\begin{figure}[]
-		\includegraphics[scale=1.7]{assets/harvest.pdf}
+\begin{figure}[tbp]
+		\includegraphics[scale=1.7]{harvest.pdf}
     \centering
     \cprotect\caption{Examples flow from archive.org and are stored on our
     disks, where we extract the \texttt{tar} files first by day, then by
@@ -217,29 +222,28 @@ halved the minimum length of an example.
 \subsection{Product}
 
 In all, we mined 1 month of \texttt{tar} files, extracted 15,200 \texttt{tex}
-files, expanded macros 7,200 unique files and generated data 500,000 rendering
-examples. We decided to randomly subsample about 40\% of that as our final
-candidate set, after deduplicating, we were left with 170,00 images. Our formula
-files can be found at~\url{https://github.com/rvente/TeXNet.ai/Dataset .} A
-graphical view of our data pipeline can be seen in Figure~\ref{datapipeline}.
+files, expanded macros 7,200 unique files and generated data 500,000
+syntactically valid examples. We decided to randomly subsample about 40\% of
+that as our final candidate set. After deduplicating, we were left with 170,00
+original examples. Our formula files can be found
+at~\url{https://github.com/rvente/TeXNet.ai/Dataset .} A graphical view of our
+data pipeline can be seen in Figure~\ref{datapipeline}.
 
 \section{Network Architecture}
 
-Our network has its basis in \citeauthor{singh2018teaching}'s research. The
-architecture has several essential features that we enumerate with breif
-explanations and proceed with detailed remarks on their implementation in our
-architecture.
+Like much of our own, our network is based on \citeauthor{singh2018teaching}'s
+research. The general architecture has several essential features that we
+enumerate with brief explanations then proceed with detailed remarks on their
+relevance to our architecture.
 
 \begin{description}
   \item[Convolutional Neural Network (CNN)] Layers in our neural model learn
-  convolutions on image space that extracts meaningful information into a
+  convolutions on pixel space that extracts meaningful information into a
   compressed internal embedding, that is, a vector which has a dense encoding of
   the contents of the input image.
-  \item[Recurrent Neural Network (RNN)] At time $t$, the network's layer $n$ takes as
-  input the output of layer $n$ at time $t-1$. To train such a network using
-  backpropagation, it is "unrolled" so as to emulate a feed-forward network,
-  allowing the updates to propagate. This allows for reasoning over time because
-  information from prior time-steps can factor into current time steps.
+  \item[Recurrent Neural Network (RNN)] This allows for reasoning over time
+  because information from prior time-steps can factor into current time steps.
+  It accomplishes this by incorporating as input the output of previous layers.
   \item[Long-Short Term Memory (LSTM)] Looseley speaking, the LSTM cells in the
   neural network "learn what to forget and when to forget it." This aspect of
   the architecture allows a particular subset of the previous layer's output to
@@ -251,9 +255,14 @@ architecture.
   for focused steps in the prediction process.
 \end{description}
 
+\subsection{Convolutional Neural Network}
+
 \subsection{Recurrent Neural Networks}
 
-The issue with an RNN alone is that memory of previous inputs quickly decay when
+At time $t$, the an RNN's layer $n$ takes as input the output of layer $n$ at
+time $t-1$. To train such a network using backpropagation, it is "unrolled" so
+as to emulate a feed-forward network, allowing the updates to propagate. The
+issue with an RNN alone is that memory of previous inputs quickly decay when
 moving from time-step to time-step. 
 
 \subsection{Long-Short Term Memory Configuration}
@@ -262,10 +271,37 @@ To solve these issues, researchers use need a network to selectively add and
 remove inputs into the current state \parencite{zhang2019dive}. Dating back to
 1997, this LSTM architecture solves this using gates to control the flow of data
 during training and inference \parencite{zhang2019dive}. It takes 3 inputs,
-$c_{t-1}$ memory at time $t-1$, 
+$c_{t-1}$ memory at time $t-1$, %TODO: continue
 
+\section{Training and Evaluation}
 
-\section{Evaluation}
+\begin{figure}[h]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{histogram.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{scorehistogram.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{1.0\textwidth}
+		\includegraphics[scale=.425]{scorebylen.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+  \caption[Model]{This assessment is on the validation set (a) The mean length
+  is with a mean of  32.56 and standard deviation of 23.82. (b) BLEU Scores are
+  strongly concentrated on 1.0, with $\mu = 92.5$ and $\sigma =  23.81$.
+  (c) As expected, performance is inversely proportional to length, however on the longest
+  tokens, the model still perfomed at a respectable .82 BLEU score.}
+\end{figure}
+
+We trained the neural network on a Virtual Machine (VM) with an NVidia Tesla
+V100. Later, that platform became unavailable, so we migrated training to a VM
+with an NVidia Tesla P1 instead. Unfortunately, this change means we cannot make
+conclusions about the seconds to convergence between datasets of different size.
 
 For evaluation, we use Bilingual Evaluation Understudy (BLEU), the emerging
 standard among neural network solutions to the \textsc{im2latex} problem. BLEU
@@ -274,8 +310,29 @@ is an automated metric for assessing machine translation accuracy
 (ground truth) to the predicted sequence.
 
 We report 3 metrics: first we compute global BLEU score across all examples and
-then again with 2 splits. The first split is performance by length in tokens the
-target sequence.
+then again with 2 splits. The first split evaluates performance by length in
+tokens of the target sequence and the next split evaluates performance based on
+the contents of the expression.
+
+We selected 3 "categories," chosen based on the qualities of the expression. For
+Group A, we select expressions containing matrices, arrays, and peice-wise
+functions (cases). For Group B, we select those containing fractions. We leave
+the rest of the data in Group C. We note that the sets not disjoint.
+\begin{figure}[h]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{scorebylenstacked.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=.425]{scorebyfrac.pdf}
+		\centering
+		\caption{}
+	\end{subfigure}
+  \caption[Model]{(a) We generalize cases, arrays, matrices, column vectors here
+  and evaluate performance on that set finding $\mu = 0.85, \sigma=0.14$. (b) We match
+  \texttt{frac} and \texttt{over} for fractions finding $\mu = 0.91, \sigma =.11$.}
+\end{figure}
 
 From \citeauthor{papineni2002bleu}, BLEU score has a penalty for translations
 that are too long and those which are too short. The former case is handled
@@ -292,12 +349,18 @@ the candidate sentence. Then, we have
 \end{equation}
 where $p_n$ is geometric mean of $n$-gram precisions from 1 to $N$ and $w_n$ is
 a parameter weight, such that $\sum_i w_i = 1$. \citeauthor{papineni2002bleu}
-used $w_n = 1/N$. BLEU score has gained widespread use because it is predictive
-of human judgements.
+used $w_n = 1/N$. \citeauthor{papineni2002bleu} show that BLEU score is
+predictive of human judgements, resulting in its widespread use in translation
+tasks.
 
+We use the same reformulation of this metric as \parencite{singh2018teaching}
+and \parencite{deng2016you}, the bigram BLEU (BLEU2) score computed with $w_1=w_2=.5$
+and $w_i = 0$ for $i>2$. The scores we report actually compare non-normalized
+target sequences to the normalized predicted sequences, resulting in a
+pessimistic predictive score because the network was not trained on this
+sequence. Despite this, the BLEU2 scores are satisfactory.
 
-
-\section{Future work}
+\subsection{Limitations and Future work}
 
 %lstm for infinite examples
 %gru for faster training and deepermodels
@@ -326,13 +389,13 @@ of human judgements.
 
 \end{figure}
 This is a sample from a particular document whose source code induced a false
-match Math encased in dollar-signs has been deprecated in \LaTeX{}, but remains
-in wide use as an artifact from \TeX{}. It was deprecated to facilitate parsing:
-unlike \verb|\(| which indicates that it opens to the right, the dollar-sign has
-no such indication. The reason the previous scripts were matching these
-plain-text strings was because matching all strings that start and end in
-dollar-signs doesn't preclude text from matching. In this case, the \verb|$| of
-the first line matched with the first \verb|$| of the 4th line. 
+match. Math code encased in dollar-signs has been deprecated in \LaTeX{}, but
+remains in wide use as an artifact from \TeX{}. It was deprecated to facilitate
+parsing: unlike \verb|\(| which indicates that the expression opens to the
+right, the dollar-sign gives no such indication. The reason the previous scripts
+were matching these plain-text strings was because matching all strings that
+start and end in dollar-signs doesn't preclude text from matching. In this case,
+the \verb|$| of the first line matched with the first \verb|$| of the 4th line. 
 
 \end{appendix}
 \end{document}
