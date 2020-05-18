@@ -126,6 +126,8 @@ even specified the sequence-to-sequence attention machanism that makes these
 models suitable for the problem, but there have been a wide variety in the
 particular architectures of the neural models.
 
+% TODO: summarize architecture evolution
+
 \citeauthor{deng2016you}
 \citeauthor{genthial2016image}
 \citeauthor{wang2019translating}
@@ -291,7 +293,7 @@ $c_{t-1}$ memory at time $t-1$, %TODO: continue
 		\centering
 		\caption{}
 	\end{subfigure}
-  \caption[Model]{This assessment is on the validation set (a) The mean length
+  \caption[Model]{This assessment is on the validation set $N=1,652$. (a) The mean length
   is with a mean of  32.56 and standard deviation of 23.82. (b) BLEU Scores are
   strongly concentrated on 1.0, with $\mu = 92.5$ and $\sigma =  23.81$.
   (c) As expected, performance is inversely proportional to length, however on the longest
@@ -329,9 +331,12 @@ the rest of the data in Group C. We note that the sets not disjoint.
 		\centering
 		\caption{}
 	\end{subfigure}
-  \caption[Model]{(a) We generalize cases, arrays, matrices, column vectors here
-  and evaluate performance on that set finding $\mu = 0.85, \sigma=0.14$. (b) We match
-  \texttt{frac} and \texttt{over} for fractions finding $\mu = 0.91, \sigma =.11$.}
+  \caption[Model]{(a) We generalize cases (peicewise functions), arrays,
+  matrices, column vectors here and evaluate performance on that set finding
+  $\mu = 0.85, \sigma=0.14$. Unsurprisingly, matrices were more challenging for
+  the model than general math, but matrices are underepresented at $N=291$ (b)
+  We match \texttt{frac} and \texttt{over} for fractions finding $\mu = 0.91,
+  \sigma =.11; N = 2897$.}
 \end{figure}
 
 From \citeauthor{papineni2002bleu}, BLEU score has a penalty for translations
@@ -362,8 +367,10 @@ sequence. Despite this, the BLEU2 scores are satisfactory.
 
 \subsection{Limitations and Future work}
 
-%lstm for infinite examples
+% TODO: finish
+%lstm / variational autoencoder for infinite examples
 %gru for faster training and deepermodels
+%go deeper: cite the other references 
 
 \printbibliography{}
 
