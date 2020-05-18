@@ -1,1 +1,10 @@
-From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial} ^^E^^L 
+From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial}
+This is a sample from a particular document whose source code induced a false
+match. Math code encased in dollar-signs has been deprecated in \LaTeX{}, but
+remains in wide use as an artifact from \TeX{}. It was deprecated to facilitate
+parsing: unlike \verb|\(| which indicates that the expression opens to the
+right, the dollar-sign gives no such indication. The reason the previous scripts
+were matching these plain-text strings was because matching all strings that
+start and end in dollar-signs doesn't preclude text from matching. In this case,
+the last \verb|$| of the first line matched with the first \verb|$| of the 4th
+line.^^E^^L 

@@ -135,6 +135,8 @@ INPUT /usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+INPUT /usr/share/texmf-dist/tex/latex/changepage/chngpage.sty
+INPUT /usr/share/texmf-dist/tex/latex/changepage/chngpage.sty
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.aux
@@ -196,6 +198,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmcsc10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main.toc
@@ -248,6 +251,8 @@ INPUT /home/ralph/github/TeXNet.ai/Final-Paper/assets/scorebylenstacked.pdf
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/assets/scorebyfrac.pdf
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/assets/scorebyfrac.pdf
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/assets/scorebyfrac.pdf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmcsc10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmcsc10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmtt8.tfm
 OUTPUT /home/ralph/github/TeXNet.ai/Final-Paper/main-3.cpt
 INPUT /home/ralph/github/TeXNet.ai/Final-Paper/main-3.cpt

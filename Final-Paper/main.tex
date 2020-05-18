@@ -36,6 +36,7 @@
  citestyle=ieee
  ]{biblatex}
 \addbibresource{main.bib}
+\usepackage{chngpage}
 
 
 \makeatletter
@@ -63,6 +64,7 @@
 \setlength{\parindent}{0em}
 \setlength{\parskip}{.5em}
 \newcommand{\TeXNet}{Hunter \TeX Net}
+\newcommand{\BLEU}{\textsc{Bleu}}
 
 \title{\TeXNet{} \textbar{} CSCI 350 Project Proposal}
 \author{Alex Taradachuck \and Ralph ``Blake'' Vent\'{e}}
@@ -73,12 +75,15 @@
 \maketitle
 
 \begin{abstract}
-  The OpenAI request for research spawned research in using Visual Neural Models
-  for translating mathematical expressions into markup code. Since the debut,
-  progress has been largely incremental. Singh 2018, Wang 2019, and Bender 2019
-  all attribute properties of their respect models to the biases in the corpus
-  and its pre-processing. We present a new dataset and a pipeline for harvesting
-  examples from source files hoping to minimize these biases.
+  The OpenAI request for research spawned investigation into visual neural
+  models for translating mathematical expressions into markup code. Since the
+  debut, progress has been largely incremental. Singh 2018, Wang 2019, and
+  Bender 2019 all attribute properties of their respect models to the biases in
+  the corpus and its pre-processing. We present a new dataset of 170,000
+  rendered examples and 500,000 normalized formulas along with a pipeline for
+  harvesting examples from source files hoping to minimize these biases. We
+  train a Convolutional Neural Network with Long-Short Term Memory Cells and an
+  attention mechanism to a testing accuracy of 0.87 bigram \BLEU{} score.
 \end{abstract}
 
 \tableofcontents
@@ -102,8 +107,8 @@ translate the expression.
 Introduced in 2016 by~\citeauthor{deng2016you}, the \texttt{im2latex100k} dataset has
 facilitated research by reducing the overhead of heavy pre-processing. Using
 this dataset, other solutions to \textsc{im2latex} have seen substantial
-progress. Recently, it has come under question as a possible \textit{bottleneck} for
-progress. We discuss this in greater detail in Section \ref{datainnov}.
+progress. Recently, it has come under scrutiny as a possible \textit{bottleneck} for
+progress. We discuss this in greater detail in Section~\ref{datainnov}.
 
 \cprotect
 \subsection{\texttt{im2latex} Problem Specification}
@@ -138,10 +143,11 @@ particular architectures of the neural models.
 
 \subsection{Challenges}
 
-We harvested examples from Cornell's arXiv archive. As the arXiv strictly
-forbids scraping, we found a patron who properly obtained copies and uploaded
-them to \url{archive.org}. We wrote a script to extract the source code files,
-and notably, we use the \texttt{pandoc} document parser.
+We harvested examples from Cornell's arXiv journal. As the arXiv strictly
+forbids scraping, we discovered that a generous archivist properly obtained
+copies (paying for transfer from Amazon s3 buckets) and uploaded them to
+\url{archive.org}. We wrote a script to extract the source code files, and
+notably, we use the \texttt{pandoc} document parser.
 
 On this note, \LaTeX{} and its subset, \TeX{} pose an unique set of challenges
 compared to other steps of the pre-processing pipeline. \LaTeX{} is a
@@ -194,17 +200,21 @@ the final set, eliminating one possible source of bias in the dataset.
 
 %\begin{figure}[!h]
 \begin{figure}[tbp]
-		\includegraphics[scale=1.7]{harvest.pdf}
+\begin{adjustwidth}{-1in}{-1in}% adjust the L and R margins by 1 inch
+		\includegraphics[scale=2.0]{harvest.pdf}
     \centering
-    \cprotect\caption{Examples flow from archive.org and are stored on our
-    disks, where we extract the \texttt{tar} files first by day, then by
+\end{adjustwidth}
+    \cprotect\caption{Examples flow from the Internet Archive and are stored on
+    our disks, where we extract the \texttt{tar} files first by day, then by
     submission, into the document folders. Then \texttt{pandoc} pulls in all of
     the dependencies of this particular document and writes out one stand-alone
     document with macros expanded. Then we match the regular expression
     \verb|\((.*?)\)| that \texttt{pandoc} uses to wrap mathematical expressions.
     As a general tool \texttt{pandoc} can convert between other markup language
     in the same way, making it useful for standardizing data from disparate
-    sources.}\label{datapipeline}
+    sources. Special thanks to Brian Newbold \url{http://bnewbold.net/}, an
+    internet archivist, working at the Internet Archive who provided the raw
+    form of the data we pre-processed.}\label{datapipeline}
 \end{figure}
 
 From~\citeauthor{deng2016you}, we also reiterate that several \LaTeX{} input sequences
@@ -278,7 +288,7 @@ $c_{t-1}$ memory at time $t-1$, %TODO: continue
 \section{Training and Evaluation}
 
 \begin{figure}[h]
-	\begin{subfigure}{0.5\textwidth}
+  \begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=.425]{histogram.pdf}
 		\centering
 		\caption{}
@@ -288,16 +298,22 @@ $c_{t-1}$ memory at time $t-1$, %TODO: continue
 		\centering
 		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{1.0\textwidth}
-		\includegraphics[scale=.425]{scorebylen.pdf}
+  \begin{subfigure}{1.0\textwidth}
 		\centering
+		\includegraphics[scale=.425]{scorebylen.pdf}
 		\caption{}
 	\end{subfigure}
-  \caption[Model]{This assessment is on the validation set $N=1,652$. (a) The mean length
-  is with a mean of  32.56 and standard deviation of 23.82. (b) BLEU Scores are
-  strongly concentrated on 1.0, with $\mu = 92.5$ and $\sigma =  23.81$.
-  (c) As expected, performance is inversely proportional to length, however on the longest
-  tokens, the model still perfomed at a respectable .82 BLEU score.}
+  \caption[Model]{This assessment is on the validation set $N=1,652$. (a)
+  Plotted with 50 bins. The mean length is with a mean of  32.56 and standard
+  deviation of 23.82. (b) Plotted with 100 bins. \BLEU{} Scores are strongly
+  concentrated on 1.0, with $\mu = 92.5$ and $\sigma = 23.81$. It seems that the
+  discontinuous indentation before 1.0 is an artifact of how \BLEU{} score
+  penalizes non-perfect matches. At 32 tokens. There, a single incorrect token
+  causes bin. (c) As expected, performance is inversely proportional to length,
+  however on the longest tokens, the model still perfomed at a respectable .82
+  \BLEU{} score. The steep drop-off after 100 tokens is caused in part by there
+  being fewer examples contributing to the average on that bin, so a few
+  uncharacteristically bad predictions have a large influence.} 
 \end{figure}
 
 We trained the neural network on a Virtual Machine (VM) with an NVidia Tesla
@@ -305,13 +321,13 @@ V100. Later, that platform became unavailable, so we migrated training to a VM
 with an NVidia Tesla P1 instead. Unfortunately, this change means we cannot make
 conclusions about the seconds to convergence between datasets of different size.
 
-For evaluation, we use Bilingual Evaluation Understudy (BLEU), the emerging
-standard among neural network solutions to the \textsc{im2latex} problem. BLEU
+For evaluation, we use Bilingual Evaluation Understudy (\BLEU{}), the emerging
+standard among neural network solutions to the \textsc{im2latex} problem. \BLEU{}
 is an automated metric for assessing machine translation accuracy
 \cite[1]{papineni2002bleu}. It is computed by comparing a target translation
 (ground truth) to the predicted sequence.
 
-We report 3 metrics: first we compute global BLEU score across all examples and
+We report 3 metrics: first we compute global \BLEU{} score across all examples and
 then again with 2 splits. The first split evaluates performance by length in
 tokens of the target sequence and the next split evaluates performance based on
 the contents of the expression.
@@ -322,24 +338,24 @@ functions (cases). For Group B, we select those containing fractions. We leave
 the rest of the data in Group C. We note that the sets not disjoint.
 \begin{figure}[h]
 	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=.425]{scorebylenstacked.pdf}
-		\centering
+    \includegraphics[scale=.425]{scorebylenstacked.pdf}
+    \centering
 		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
+  \begin{subfigure}{0.5\textwidth}
+    \centering
 		\includegraphics[scale=.425]{scorebyfrac.pdf}
-		\centering
 		\caption{}
-	\end{subfigure}
+  \end{subfigure}
   \caption[Model]{(a) We generalize cases (peicewise functions), arrays,
   matrices, column vectors here and evaluate performance on that set finding
   $\mu = 0.85, \sigma=0.14$. Unsurprisingly, matrices were more challenging for
   the model than general math, but matrices are underepresented at $N=291$ (b)
-  We match \texttt{frac} and \texttt{over} for fractions finding $\mu = 0.91,
-  \sigma =.11; N = 2897$.}
+  We match \texttt{frac} and \texttt{over} for fractions finding $\mu = 0.91$
+  and $\sigma =0.11$ Samples $N = 2897$.}
 \end{figure}
 
-From \citeauthor{papineni2002bleu}, BLEU score has a penalty for translations
+From \citeauthor{papineni2002bleu}, \BLEU{} score has a penalty for translations
 that are too long and those which are too short. The former case is handled
 implicitly, and the latter requires an explicit brevity penalty, $\text{BP}$
 computed as
@@ -350,27 +366,27 @@ computed as
 with $r$ as the length of of the ground-truth sentence and $c$ as the length of
 the candidate sentence. Then, we have 
 \begin{equation}
-  \text{BLEU} = \text{BP} \exp\left( \sum_{i=1}^n w_i \log p_i \right),
+  \text{\BLEU} = \text{BP} \exp\left( \sum_{i=1}^n w_i \log p_i \right),
 \end{equation}
 where $p_n$ is geometric mean of $n$-gram precisions from 1 to $N$ and $w_n$ is
 a parameter weight, such that $\sum_i w_i = 1$. \citeauthor{papineni2002bleu}
-used $w_n = 1/N$. \citeauthor{papineni2002bleu} show that BLEU score is
+used $w_n = 1/N$. \citeauthor{papineni2002bleu} show that \BLEU{} score is
 predictive of human judgements, resulting in its widespread use in translation
 tasks.
 
 We use the same reformulation of this metric as \parencite{singh2018teaching}
-and \parencite{deng2016you}, the bigram BLEU (BLEU2) score computed with $w_1=w_2=.5$
+and \parencite{deng2016you}, the bigram \BLEU{} (\BLEU{}2) score computed with $w_1=w_2=.5$
 and $w_i = 0$ for $i>2$. The scores we report actually compare non-normalized
 target sequences to the normalized predicted sequences, resulting in a
 pessimistic predictive score because the network was not trained on this
-sequence. Despite this, the BLEU2 scores are satisfactory.
+sequence. Despite this, the \BLEU{}2 scores are satisfactory.
 
 \subsection{Limitations and Future work}
 
-% TODO: finish
-%lstm / variational autoencoder for infinite examples
-%gru for faster training and deepermodels
-%go deeper: cite the other references 
+% TODO: finish we know that performance suffers with long length, but is that
+% because of too low resolution? if so take an image and just split it ∘ lstm /
+% variational autoencoder for infinite examples ∘ gru for faster training and
+% deepermodels go deeper: cite the other references who do better than us
 
 \printbibliography{}
 
@@ -391,10 +407,7 @@ sequence. Despite this, the BLEU2 scores are satisfactory.
   \begin{lstlisting}[basicstyle=\footnotesize\ttfamily]
   $. It would be of interest to rederive this result using the refined Kostant constants. \begin{theorem}[{\cite[Theorem 1.1]{CKM}}] \label{thm:volkn11} Let $    
   \end{lstlisting}
-   \cprotect\caption{From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial} }\label{falsematch}
-
-
-\end{figure}
+   \cprotect\caption{From \texttt{arXiv:1801.07684} \citeauthor{benedetti2018combinatorial} 
 This is a sample from a particular document whose source code induced a false
 match. Math code encased in dollar-signs has been deprecated in \LaTeX{}, but
 remains in wide use as an artifact from \TeX{}. It was deprecated to facilitate
@@ -402,7 +415,9 @@ parsing: unlike \verb|\(| which indicates that the expression opens to the
 right, the dollar-sign gives no such indication. The reason the previous scripts
 were matching these plain-text strings was because matching all strings that
 start and end in dollar-signs doesn't preclude text from matching. In this case,
-the \verb|$| of the first line matched with the first \verb|$| of the 4th line. 
+the last \verb|$| of the first line matched with the first \verb|$| of the 4th
+line.}\label{falsematch}
+\end{figure}
 
 \end{appendix}
 \end{document}

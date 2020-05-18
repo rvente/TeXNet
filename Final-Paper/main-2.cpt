@@ -1,9 +1,11 @@
-Examples flow from archive.org and are stored on our
-    disks, where we extract the \texttt{tar} files first by day, then by
+Examples flow from the Internet Archive and are stored on
+    our disks, where we extract the \texttt{tar} files first by day, then by
     submission, into the document folders. Then \texttt{pandoc} pulls in all of
     the dependencies of this particular document and writes out one stand-alone
     document with macros expanded. Then we match the regular expression
     \verb|\((.*?)\)| that \texttt{pandoc} uses to wrap mathematical expressions.
     As a general tool \texttt{pandoc} can convert between other markup language
     in the same way, making it useful for standardizing data from disparate
-    sources.^^E^^L 
+    sources. Special thanks to Brian Newbold \url{http://bnewbold.net/}, an
+    internet archivist, working at the Internet Archive who provided the raw
+    form of the data we pre-processed.^^E^^L 
