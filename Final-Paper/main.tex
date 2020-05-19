@@ -289,6 +289,17 @@ relevance to our architecture.
 
 \subsection{Convolutional Neural Network}
 
+A deep CNN is used to encode preprocessed input images into a \textit{visual
+feature grid} composed of \textit{visual feature vectors}. These feature vectors
+are then pooled to get \textit{pooled feature vectors}. Each pooled feature
+vector acts as a rectangular window into the pooled images which partitions the
+image into spatially localized regional encodings \parencite{singh2018teaching}.
+Encoding features in this piecewise manner allows for a decoder artchitecture
+that places focus on select regions at a certain time-step while de-emphasizing
+the rest. Additionally, we are able to construct different encoded features by
+specifying receptive field sizes during pooling. After pooling, the resulting
+sequence of pooled feature encodings are passed to the decoder.
+
 \subsection{Recurrent Neural Networks}
 
 At time $t$, the an RNN's layer $n$ takes as input the output of layer $n$ at
@@ -431,21 +442,15 @@ images in the following manner using imagemagick:
   \end{itemize} 
 \end{enumerate}
 The use of our own data, scraped from real world examples, lended our model to
-be more accurate when it came to inferencing downloaded images. However, there
-was a disparity in training time between Singh's model and ours, despite having
-similair BLEU scores, which could've impacted results.For now, the current model
-is effective only on \LaTeX standard-font equations but preprocessing steps can
-be applied to make the model more invariant to typefont of data. As a proof of
-concept however, building im2latex models with deeper layers and increasing data
-size is promising given our results and the general trend NPL models are
-currently taking.
+be more accurate when it came to inferencing specific downloaded images.
+However, there was a disparity in training time between Singh's model and ours,
+despite having similair BLEU scores, which could've impacted results. For now,
+the current model is effective only on \LaTeX standard-font equations but
+preprocessing steps can be applied to make the model more invariant to typefont
+of data. As a proof of concept however, building im2latex models with deeper
+layers and increasing data size is promising given our results and the general
+trend NPL models are currently taking.
 
-
-
-% TODO: finish we know that performance suffers with long length, but is that
-% because of too low resolution? if so take an image and just split it ∘ lstm /
-% variational autoencoder for infinite examples ∘ gru for faster training and
-% deepermodels go deeper: cite the other references who do better than us
 
 \printbibliography{}
 
@@ -478,6 +483,71 @@ previous scripts were matching these plain-text strings was because matching all
 strings that start and end in dollar-signs doesn't preclude text from matching.
 In this case, the last \verb|$| of the first line matched with the first
 \verb|$| of the 4th line.
+  \section{Team Member Roles and Contributions}
+    \subsection{Alex}
+      \begin{enumerate}
+        \item Upgraded Singh's model to Python 3 and got it working with the
+        latest version of Tensorflow-GPU v1 (1.15.0).
+        \begin{itemize}
+          \item Use of deprecated neural layers slowed porting to Tensorflow v2
+          and time constraints led this idea to being scrapped for the time
+          being. 
+        \end{itemize}
+        \item Got the model to begin training on VM, specifically using the dedicated GPU. 
+        \item Modified model to be able to take Blake's generated data as input.
+        \begin{itemize}
+          \item Hard-coded expected vocabulary input had to be changed and number
+          of output layers had to be adjusted to the different vocabulary
+          size of Blake's data.
+          \item Many batch-size assertions had to be removed, which posed the
+          risk of data-corruption, but was necessary to get the model running
+          and did not pose a problem during training.
+        \end{itemize}
+        \item Focused on retrieving training metric data and parsing through log files.
+        \item Modified outdated Jupyter notebooks into Python 3 scripts to
+        perform inference on specified input images in two parts.
+        \begin{enumerate}
+          \item Prepare the data by generating a vocabulary directory and
+          copying over the latest model snapshot to be used in inference.
+          \item After the model is run on the data using the specified snapshot,
+          a second script outputs the predictions by parsing through the
+          logfiles and retrieving \LaTeX sequences from a sequences of IDs.
+        \end{enumerate}
+        \item Experimented with inference given downloaded images from the
+        internet and figured out what was necessary to get the model to run
+        optimally in this case.
+      \end{enumerate}
+    \subsection{Blake}
+      \begin{enumerate}
+        \item 
+      \end{enumerate}
+    \section{Challenges Faced}
+      Having very-little-to-no experience working with large scale AI models in
+      the past, we faced many challenges in the first attempts of getting the
+      Singh model to run. Locally, Alex first faced the issue of WSL (Windows
+      Subsystem for Linux) not having GPU support and had to configure
+      Powershell to get the first iterations of the model to run. After that was
+      successful, we faced issues when attempting to upload the model to a
+      Google NVIDIA VM. A need for older versions of CUDNN and graphics drivers,
+      because of the model's use of Tensorflow v1, led to collaborative
+      troubleshooting to finally get everything running. We are very proud of
+      what we managed to accomplish in a short timeframe, however there are
+      still many directions where this project can go.
+      \section{Topics}
 
+      \subsection{Machine Learning}
+      
+      \begin{enumerate}
+      \item Optical Character Recognition (OCR) \nocite{reul2019ocr4all} \nocite{sexton2005database}
+      \item Image Segmentation / Document Recognition \nocite{lecun1998gradient} \nocite{suzuki2003infty}
+      \item Artificial Neural Network (ANN) \nocite{cheng2017survey}
+        \begin{enumerate}
+        \item Natural Language Processing (NLP)
+        \item Long Short Term Memory in ANN's
+        \item Recurrence and Convolution in ANN's
+        \item Convolutional Neural Networks
+        \end{enumerate}
+      \item Support Vector Machines
+      \end{enumerate}
 \end{appendix}
 \end{document}
