@@ -413,13 +413,14 @@ decrease with increasing sequence length. This is most likely due to the low
 proportion of training data sequences over 140 symbols however it could also be
 a result of a loss in resolution as sequence length increases. A next step
 forward could include partitioning the data if sequence length is long enough.
-Additionally, the preprocessing scripts utilized by
-Singh \parencite{singh2018teaching} leave a white outline around the images generated
+Additionally, the preprocessing scripts utilized by Singh
+\parencite{singh2018teaching} leave a white outline around the images generated
 from \LaTeX\ which the network is hardwired to expect. As a result, in order for
 the model to work on pulled examples from the internet, we had to preprocess the
 images in the following manner using imagemagick:
 \begin{enumerate}
-  \item Resize image to fit under the 128 pixel token height limit
+  \item Crop formula to reduce outside padding and resize image to fit under the
+  128 pixel token height limit (if needed)
   \begin{itemize}
     \item convert \textit{filename} -resize x90 \textit{filename}
   \end{itemize}
@@ -429,12 +430,15 @@ images in the following manner using imagemagick:
     \item convert \textit{filename} -fuzz 5\% -transparent white \textit{filename}
   \end{itemize} 
 \end{enumerate}
-The use of our own data, scraped from real world examples, lended our model to be
-more accurate when it came to inferencing downloaded images. However, there was
-a disparity in training time between Singh's model and ours, despite having
-similair BLEU scores, which could've impacted results. As a proof of concept
-however, building im2latex models with deeper layers and increasing data size is
-promising given our results and the general trend NPL models are currently taking.
+The use of our own data, scraped from real world examples, lended our model to
+be more accurate when it came to inferencing downloaded images. However, there
+was a disparity in training time between Singh's model and ours, despite having
+similair BLEU scores, which could've impacted results.For now, the current model
+is effective only on \LaTeX standard-font equations but preprocessing steps can
+be applied to make the model more invariant to typefont of data. As a proof of
+concept however, building im2latex models with deeper layers and increasing data
+size is promising given our results and the general trend NPL models are
+currently taking.
 
 
 
