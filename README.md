@@ -191,3 +191,42 @@ the perplexity metric, common to machine translation tasks
 [@jelinek1977perplexity 1]. We will pay special attention to evaluating
 how well our model handles nested structures compared to the models in
 [Wygiwys]{.smallcaps}.
+
+Directory Structure (points of focus)
+==========
+
+```
+TEXNET
+│   
+│      
+│
+└───data -> has to be made by the user (extract data folder in there)
+│   │   
+│   │   
+│   │
+│   └───formula_images
+│       │   *.png    
+│   
+└───src -> main directory of where model will be ran
+│   │   
+│   │   
+│   │
+│   └───tools
+│   │   │   prepareData.py -> run first when images are placed in inference folder
+│   │   │   predict.py -> run this script after running the model based on the script outputted from prepareData.py
+│   │   │   predictions.csv -> outputted csv with filenames and LaTeX predictions
+│   │   
+│   │   
+│   │
+│   └───tb_metrics -> main logging directory where logs from model training will be stored
+│   │
+│   │
+│   │  run.py -> main file that runs the model, has settable hyperparameters and variables that need to be specified based on the training machine
+|
+└───predictions
+│   │   
+│   │   
+│   │
+│   └───formula_images -> paste images to perform inference on here before running inference scripts
+
+```
