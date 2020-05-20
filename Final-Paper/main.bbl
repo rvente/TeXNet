@@ -201,8 +201,8 @@
       \strng{authorbibnamehash}{68cc406b1f674faf426a2f853401e37a}
       \strng{authornamehash}{68cc406b1f674faf426a2f853401e37a}
       \strng{authorfullhash}{6bbccfc10d5cec4da080438a1099af8b}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Unpublished draft. Retrieved}
@@ -298,8 +298,8 @@
       \strng{authorbibnamehash}{f32e7a9fc6a087e934ee9af82849e616}
       \strng{authornamehash}{f32e7a9fc6a087e934ee9af82849e616}
       \strng{authorfullhash}{129baa7544e549ac416e18a9b8b8f30a}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{math.CO}
@@ -537,8 +537,8 @@
       \strng{authorbibnamehash}{ddfbbd766c9350a8cd717473303a8044}
       \strng{authornamehash}{ddfbbd766c9350a8cd717473303a8044}
       \strng{authorfullhash}{a1ad0fb7c456cb633a7405adea24f7a7}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1710.09282}

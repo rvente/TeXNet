@@ -102,7 +102,10 @@
   attention mechanism to a testing accuracy of 0.87 bigram \BLEU{} score.
 \end{abstract}
 
+\begin{singlespace}
 \tableofcontents
+\end{singlespace}
+
 \section{Previous Work}
 
 \subsection{Debut}
@@ -147,12 +150,17 @@ even specified the sequence-to-sequence attention machanism that makes these
 models suitable for the problem, but there have been a wide variety in the
 particular architectures of the neural models.
 
-% TODO: summarize architecture evolution for all 4 authors
+The authors \citeauthor{deng2016you}, \citeauthor{genthial2016image},
+\citeauthor{wang2019translating}, and \citeauthor{bender2019learning} all
+iteratively build on the models before them and experience iteratively better
+results.
 
-\citeauthor{deng2016you}
-\citeauthor{genthial2016image}
-\citeauthor{wang2019translating}
-\citeauthor{bender2019learning}
+We proceed with Singh's model for our architecture which notably does away with
+max-pooling layers at no cost to performance. Details about its convolutional
+encoder, attention model, and decoder are all found starting with
+\cite[3]{singh2018teaching}. Our only change to the model was to expand the
+number of output units from 50 to 64 to suit our dataset's more diverse
+vocabulary.
 
 \section{Corpus Harvesting}
 
@@ -202,7 +210,6 @@ for the presence of at least one \LaTeX{} command (from the command vocabulary,
 $\Sigma$) before writing out the final formula code. This has the added benefit
 of removing examples that are strictly numbers and those that are otherwise
 linear strings of alphanumeric characters.
-% TODO: cite singh, bender, and wang's objections
 
 Most importantly, \texttt{pandoc} expands all the macros in the source
 documents. Without this step, papers in the dataset that relied heavily on
@@ -213,6 +220,9 @@ formulas were discarded implicitly because they caused such errors, but with the
 macros expanding, documents containing macros reclaimed their representation in
 the final set, eliminating one possible source of bias in the dataset.
 
+The pipeline allows us to diverge from using the KDD-Cup 2003 as a data source.
+To us, this means the data is not representative of math as a whole. From this
+standpoint our data is free of such a bias.
 
 %\begin{figure}[!h]
 \begin{figure}[tbp]
@@ -259,10 +269,10 @@ data pipeline can be seen in Figure~\ref{datapipeline}.
 
 \section{Network Architecture}
 
-Like much of our own, our network is based on \citeauthor{singh2018teaching}'s
-research. The general architecture has several essential features that we
-enumerate with brief explanations then proceed with detailed remarks on their
-relevance to our architecture.
+Our network is based on \citeauthor{singh2018teaching}'s research. The general
+architecture has several essential features that we enumerate with brief
+explanations then proceed with detailed remarks on their relevance to our
+architecture.
 
 \begin{description}
   \item[Convolutional Neural Network (CNN)] Layers in our neural model learn
@@ -314,7 +324,10 @@ To solve these issues, researchers use need a network to selectively add and
 remove inputs into the current state \parencite{zhang2019dive}. Dating back to
 1997, this LSTM architecture solves this using gates to control the flow of data
 during training and inference \parencite{zhang2019dive}. It takes 3 inputs,
-$c_{t-1}$ memory at time $t-1$, %TODO: continue
+$c_{t-1}$ memory at time $t-1$ (context), the previous hidden state's output
+$h_{t-1}$ and of course the new sequence at the current time-step $x_t$.
+\citeauthor[12]{singh2018teaching} documents the specifics of the model we use
+in great detail.
 
 \section{Training and Evaluation}
 
@@ -334,17 +347,19 @@ $c_{t-1}$ memory at time $t-1$, %TODO: continue
 		\includegraphics[scale=.425]{scorebylen.pdf}
 		\caption{}
 	\end{subfigure}
-  \caption[Model]{This assessment is on the validation set $N=1,652$. (a)
+  \caption[Model]{This assessment is on the validation set $N=16,520$. (a)
   Plotted with 50 bins. The mean length is with a mean of  32.56 and standard
   deviation of 23.82. (b) Plotted with 100 bins. \BLEU{} Scores are strongly
   concentrated on 1.0, with $\mu = 92.5$ and $\sigma = 23.81$. It seems that the
   discontinuous indentation before 1.0 is an artifact of how \BLEU{} score
-  penalizes non-perfect matches. There, a single incorrect token
-  causes bin. (c) As expected, performance is inversely proportional to length,
-  however on the longest tokens, the model still perfomed at a respectable .87
-  \BLEU{} score. The steep drop-off after 100 tokens is caused in part by there
-  being fewer examples contributing to the average on that bin, so a few
-  uncharacteristically bad predictions have a large influence.} 
+  penalizes non-perfect matches. There, a single incorrect token causes bin. (c)
+  As expected, performance is inversely proportional to length, however on the
+  longest tokens, the model still perfomed at a respectable .82 \BLEU{} score.
+  The model seems to be generalizing well -- it doesn't need to see every token
+  in every configuration to make an accurate prediction. The steep drop-off
+  after 100 tokens is caused in part by there being fewer examples contributing
+  to the average on that bin, so a few uncharacteristically bad predictions have
+  a large influence. } 
 \end{figure}
 
 We trained the neural network on a Virtual Machine (VM) with an NVIDIA Tesla
@@ -364,7 +379,7 @@ tokens of the target sequence and the next split evaluates performance based on
 the contents of the expression.
 
 We selected 3 "categories," chosen based on the qualities of the expression. For
-Group A, we select expressions containing matrices, arrays, and peice-wise
+Group A, we select expressions containing matrices, arrays, and piece-wise
 functions (cases). For Group B, we select those containing fractions. We leave
 the rest of the data in Group C. We note that the sets not disjoint.
 \begin{figure}[h]
@@ -416,6 +431,23 @@ satisfactory.
 % This might indicate that the majority of input sequences in our
 % \texttt{im2latex170k} corpus were fairly close to being normalized. We can
 % test this by comparing the normalized corpus to the non-normalized one.
+\begin{figure}[!ht]
+  
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Researchers & BLEU Score (\%) \tabularnewline
+\midrule
+\endhead
+Deng et al 2017 & 87.73 \tabularnewline
+Genthial 2017 & 88.00 \tabularnewline
+Wang, Sun \& Wang 2018 & 88.25 \tabularnewline
+Singh 2018 & 89.00 \tabularnewline
+\textsc{texnet} & 88.48 \tabularnewline
+Wang \& Liu 2019 & 90.28 \tabularnewline
+\bottomrule
+\end{longtable}\caption{Performance alongside other solutions to \textsc{im2latex}}
+\end{figure}
+
 
 \subsection{Limitations and Future work}
 
@@ -428,31 +460,44 @@ Additionally, the preprocessing scripts utilized by Singh
 \parencite{singh2018teaching} leave a white outline around the images generated
 from \LaTeX\ which the network is hardwired to expect. As a result, in order for
 the model to work on pulled examples from the internet, we had to preprocess the
-images in the following manner using imagemagick:
+images in the following manner using \texttt{imagemagick}'s \texttt{convert}
+utility:
 \begin{enumerate}
   \item Crop formula to reduce outside padding and resize image to fit under the
   128 pixel token height limit (if needed)
-  \begin{itemize}
-    \item convert \textit{filename} -resize x90 \textit{filename}
-  \end{itemize}
+  \vspace{1em}
+  \begin{lstlisting}[basicstyle=\ttfamily]
+    convert <input-img> -resize x90 <output-img>
+  \end{lstlisting}
   \item Make the white background transparent with a fuzz of 5\% to account for
   the feather expected by the model
-  \begin{itemize}
-    \item convert \textit{filename} -fuzz 5\% -transparent white \textit{filename}
-  \end{itemize} 
+  \vspace{1em}
+  \begin{lstlisting}[basicstyle=\ttfamily]
+    convert <white-img> -fuzz 5\% -transparent white <preproc-img>
+  \end{lstlisting} 
 \end{enumerate}
+
 The use of our own data, scraped from real world examples, lended our model to
 be more accurate when it came to inferencing specific downloaded images.
 However, there was a disparity in training time between Singh's model and ours,
-despite having similair BLEU scores, which could've impacted results. For now,
-the current model is effective only on \LaTeX standard-font equations but
-preprocessing steps can be applied to make the model more invariant to typefont
-of data. As a proof of concept however, building im2latex models with deeper
-layers and increasing data size is promising given our results and the general
-trend NPL models are currently taking.
+despite having similar BLEU scores (88.7), which could've impacted results. For now,
+the current model is effective only on \LaTeX{} default typeface of Computer
+Modern, but preprocessing steps can be applied to make the model more invariant
+to typefont of data. As a proof of concept however, building im2latex models
+with deeper layers and increasing data size is promising given our results and
+the general trend NPL models are currently taking.
 
+In the future, there might be a chance to explore the use of GRU (gated
+recurrent unit) cells instead of LSTM cells. According to
+\citeauthor{zhang2019dive}, GRU cells are much less computationally insensive
+and may make deeper models more practical. Paired with the densenet approach in
+\cite{wang2019translating}, GRU's might allow for such an architecture to reap
+the benefits of deepening.
 
-\printbibliography{}
+Our final piece of future work is a cross comparison between our datasets: we
+want to see hour our model fares against \texttt{im2latex100k} and
+\texttt{im2latex140k}. Given more time, we would compare performance on all
+available models and all available data. 
 
 \newpage
 \begin{appendix}
@@ -483,7 +528,9 @@ opens to the right, the dollar-sign gives no such indication. The reason the
 previous scripts were matching these plain-text strings was because matching all
 strings that start and end in dollar-signs doesn't preclude text from matching.
 In this case, the last \verb|$| of the first line matched with the first
-\verb|$| of the 4th line.
+\verb|$| of the 4th line. Researchers from \cite[4]{deng2016you} to
+\cite{singh2018teaching} have contended with this but our solution doens't
+require filtering out long sequences aribitrarily.
 
   \section{Team Member Roles and Contributions}
     \subsection{Alex}
@@ -521,12 +568,50 @@ In this case, the last \verb|$| of the first line matched with the first
       \end{enumerate}
     \subsection{Blake}
       \begin{enumerate}
+        \item Configured the Virtual machines and installed the GPU drivers.
         \item Generated image examples from Cornell's arXiv.
         \begin{enumerate}
           \item Data exploration allowed us to construct our preprocessing pipeline.
           \item Adapted Singh's preprocessing scripts.
         \end{enumerate}
+        \item Performed system adminstration, resizing the file system to
+        respond to changing needs. 
+        \begin{enumerate}
+          \item Considering that the dataset was about 700 MB and each snapshot
+          of the model weights was 800 MB, we quickly ran out of storage with
+          our 32 GB configuration. We required 64 GB in all.
+        \end{enumerate}
+        \item Rewrote evaluation scripts from scratch to generate graphs of the
+        model's performance on different subsets.
+      \item Consistently monitored VM during training. We trained 2 models at 25
+      and 55 hours for a total training time of 80 hours.
       \end{enumerate}
+\begin{figure}[!ht]
+\begin{center}
+\begin{longtable}{ l l }
+\toprule
+  Ground Truth & Prediction  \tabularnewline
+\midrule
+\endhead
+$\nu _ { \mathrm { o b s } } \propto r ^ { s - b + 2 g } $&$\nu _ { \mathrm { o b s } } \propto r ^ { s - b + 2 g } $ \\
+$| \widehat { f } _ { k } ( x ) | \leq \frac { \epsilon } { 2 } $ & $| \widehat { f } _ { k } ( x ) | \leq \frac { \epsilon } { 2 } $\\
+$S ( 8 - 2 4 ) \geq 7 \times 1 0 ^ { - 1 4 } $&$S ( 8 - 2 4 ) \geq 7 \times 1 0 ^ { - 1 4 } $ \\
+$\frac { k ^ { 2 } } { a ^ { 2 } H ^ { 2 } } < < 1 $&$\frac { k ^ { 2 } } { a ^ { 2 } H ^ { 2 } } < < 1 $ \\
+$4 _ { 1 } ^ { + } \rightarrow 2 _ { 1 } ^ { + } $&$4 _ { 1 } ^ { + } \rightarrow 2 _ { 1 } ^ { + } $ \\
+$0 . 8 0 6 5 1 1 \pm 0 . 0 0 0 2 0 6 $&$0 . 8 0 6 5 1 1 \pm 0 . 0 0 0 2 0 6 $ \\
+$P ^ { \prime } = P \times _ { H } G L ( W ) $&$P ^ { \prime } = P \times _ { H } G L ( W ) $ \\
+$g _ { s } = ( \textbf { g } \cdot \textbf { B } ) / | \textbf { B } | $&$g _ { s } = ( \textbf { g } \cdot \textbf { B } ) / | \textbf { B } | $ \\
+$\{ 5 , 5 , 5 , 5 \} \to \{ 5 , 5 , 5 , 5 \} $&$\{ 5 , 5 , 5 , 5 \} \to \{ 5 , 5 , 5 , 5 \} $ \\
+$\theta _ { 1 } = \theta _ { 2 } = \lambda _ { l } $&$\theta _ { 1 } = \theta _ { 2 } = \lambda _ { l } $ \\
+$h _ { r m s } = 6 \times 1 0 ^ { - 1 0 } m $&$h _ { r m s } = 6 \times 1 0 ^ { - 1 0 } m $ \\
+\bottomrule
+\end{longtable}
+\end{center}
+\caption{Sample predictions. The first 10 predicted sequences between 15 and 25
+characters in length are all perfect matches. As the \BLEU{} score divulges,
+this isn't always the case. The complete set can be found in the
+\texttt{Results} directory of our repository. }
+\end{figure}
     \section{Compatability Challenges}
 
       Having very-little-to-no experience working with large scale AI models in
@@ -541,6 +626,7 @@ In this case, the last \verb|$| of the first line matched with the first
       collaborative troubleshooting to finally get everything running. We are
       very proud of what we managed to accomplish in a short timeframe, however
       there are still many directions where this project can go.
+
       \section{Topics}
 
       \subsection{Machine Learning}
@@ -555,7 +641,10 @@ In this case, the last \verb|$| of the first line matched with the first
         \item Recurrence and Convolution in ANN's
         \item Convolutional Neural Networks
         \end{enumerate}
-      \item Support Vector Machines
       \end{enumerate}
+
 \end{appendix}
+
+\printbibliography{}
+
 \end{document}

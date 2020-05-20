@@ -21,7 +21,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Convolutional Neural Network}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{8}% 
+\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{9}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{9}% 
 \defcounter {refsection}{0}\relax 
@@ -41,6 +41,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {C}Compatability Challenges}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}Topics}{17}% 
+\contentsline {section}{\numberline {D}Topics}{19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.1}Machine Learning}{17}% 
+\contentsline {subsection}{\numberline {D.1}Machine Learning}{19}% 
