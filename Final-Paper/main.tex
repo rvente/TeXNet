@@ -12,10 +12,6 @@
 % from the corresponding Computer Modern Roman (cmr) font, for the T1 font encoding.
 \DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
 \DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
-%\usepackage{setspace}
-%\openup 1em
-%\linespread{2}
-%\setstretch{2} 
 
 % \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -300,6 +296,10 @@ the rest. Additionally, we are able to construct different encoded features by
 specifying receptive field sizes during pooling. After pooling, the resulting
 sequence of pooled feature encodings are passed to the decoder.
 
+By contrast, Singh's \texttt{NOPOOL} model removed the max pooling layers which
+improved the rate of convergence and lowered training times, yet the performance
+difference without max pooling to the 
+
 \subsection{Recurrent Neural Networks}
 
 At time $t$, the an RNN's layer $n$ takes as input the output of layer $n$ at
@@ -318,7 +318,7 @@ $c_{t-1}$ memory at time $t-1$, %TODO: continue
 
 \section{Training and Evaluation}
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=.425]{histogram.pdf}
 		\centering
@@ -339,9 +339,9 @@ $c_{t-1}$ memory at time $t-1$, %TODO: continue
   deviation of 23.82. (b) Plotted with 100 bins. \BLEU{} Scores are strongly
   concentrated on 1.0, with $\mu = 92.5$ and $\sigma = 23.81$. It seems that the
   discontinuous indentation before 1.0 is an artifact of how \BLEU{} score
-  penalizes non-perfect matches. At 32 tokens. There, a single incorrect token
+  penalizes non-perfect matches. There, a single incorrect token
   causes bin. (c) As expected, performance is inversely proportional to length,
-  however on the longest tokens, the model still perfomed at a respectable .82
+  however on the longest tokens, the model still perfomed at a respectable .87
   \BLEU{} score. The steep drop-off after 100 tokens is caused in part by there
   being fewer examples contributing to the average on that bin, so a few
   uncharacteristically bad predictions have a large influence.} 
@@ -458,6 +458,7 @@ trend NPL models are currently taking.
 \begin{appendix}
   \section{Qualitative Analysis}
   \subsection{Reducing Plain Text Matches}
+
 \begin{figure}[!h]
   \qquad \textbf{The source code}
   \begin{lstlisting}[escapechar=!, basicstyle=\footnotesize\ttfamily, numbers=left, firstnumber=1132]
@@ -483,11 +484,12 @@ previous scripts were matching these plain-text strings was because matching all
 strings that start and end in dollar-signs doesn't preclude text from matching.
 In this case, the last \verb|$| of the first line matched with the first
 \verb|$| of the 4th line.
+
   \section{Team Member Roles and Contributions}
     \subsection{Alex}
       \begin{enumerate}
         \item Upgraded Singh's model to Python 3 and got it working with the
-        latest version of Tensorflow-GPU v1 (1.15.0).
+        latest version of Tensorflow-GPU v1 (1.15.2 Stable).
         \begin{itemize}
           \item Use of deprecated neural layers slowed porting to Tensorflow v2
           and time constraints led this idea to being scrapped for the time
@@ -511,7 +513,7 @@ In this case, the last \verb|$| of the first line matched with the first
           copying over the latest model snapshot to be used in inference.
           \item After the model is run on the data using the specified snapshot,
           a second script outputs the predictions by parsing through the
-          logfiles and retrieving \LaTeX sequences from a sequences of IDs.
+          logfiles and retrieving \LaTeX{} sequences from a sequences of IDs.
         \end{enumerate}
         \item Experimented with inference given downloaded images from the
         internet and figured out what was necessary to get the model to run
@@ -519,20 +521,26 @@ In this case, the last \verb|$| of the first line matched with the first
       \end{enumerate}
     \subsection{Blake}
       \begin{enumerate}
-        \item 
+        \item Generated image examples from Cornell's arXiv.
+        \begin{enumerate}
+          \item Data exploration allowed us to construct our preprocessing pipeline.
+          \item Adapted Singh's preprocessing scripts.
+        \end{enumerate}
       \end{enumerate}
-    \section{Challenges Faced}
+    \section{Compatability Challenges}
+
       Having very-little-to-no experience working with large scale AI models in
-      the past, we faced many challenges in the first attempts of getting the
-      Singh model to run. Locally, Alex first faced the issue of WSL (Windows
+      the past, we faced many challenges in the first attempts of getting
+      Singh's model to run. Locally, Alex first faced the issue of WSL (Windows
       Subsystem for Linux) not having GPU support and had to configure
-      Powershell to get the first iterations of the model to run. After that was
-      successful, we faced issues when attempting to upload the model to a
-      Google NVIDIA VM. A need for older versions of CUDNN and graphics drivers,
-      because of the model's use of Tensorflow v1, led to collaborative
-      troubleshooting to finally get everything running. We are very proud of
-      what we managed to accomplish in a short timeframe, however there are
-      still many directions where this project can go.
+      Powershell to get the first iterations of the model to run.
+      
+      After that was successful, we faced issues when attempting to upload the
+      model to a Google NVIDIA VM. A need for older versions of CUDNN and
+      graphics drivers, because of the model's use of Tensorflow v1, led to
+      collaborative troubleshooting to finally get everything running. We are
+      very proud of what we managed to accomplish in a short timeframe, however
+      there are still many directions where this project can go.
       \section{Topics}
 
       \subsection{Machine Learning}
