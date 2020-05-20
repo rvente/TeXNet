@@ -1,21 +1,19 @@
-Project Title
-=============
-
-Our title is *Hunter TeXNet* following the tradition of LeCun's *LeNet*
-Neural Network architecture [@lecun1998gradient 7] but our investigation
-will not be limited to these models.
-
-[Demo Video](https://www.youtube.com/watch?v=ew6JG2c3M24&feature=youtu.be)
-
-[Complete Dataset](https://drive.google.com/file/d/1mwUwoyhcz63mTd3s1v4Q8QoRBPBSzGEi/view?usp=sharing)
-
-Description
+TeXNet.ai
 ===========
 
 The prospect of accurately transcribing mathematical expression into a
 markup representation is enticing because it opens the doors for
 bringing new life to old mathematical texts or those for which the
 source code is unavailable.
+
+We make that dream a reality with this project, where we build on [Sumeet Singh's](https://github.com/untrix/im2latex) work porting the model to Python3 and bringing our own dataset of 170,000 examples.
+
+
+[Demo Video](https://www.youtube.com/watch?v=ew6JG2c3M24&feature=youtu.be)
+
+[Complete Dataset](https://drive.google.com/file/d/1mwUwoyhcz63mTd3s1v4Q8QoRBPBSzGEi/view?usp=sharing)
+
+
 
 Directory Structure (points of focus)
 ==========
