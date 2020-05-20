@@ -5,6 +5,8 @@ Our title is *Hunter TeXNet* following the tradition of LeCun's *LeNet*
 Neural Network architecture [@lecun1998gradient 7] but our investigation
 will not be limited to these models.
 
+Demo Link: https://www.youtube.com/watch?v=ew6JG2c3M24&feature=youtu.be
+
 Description
 ===========
 
