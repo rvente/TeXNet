@@ -1,46 +1,46 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Previous Work}{2}% 
+\contentsline {section}{\numberline {1}Previous Work}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Debut}{2}% 
+\contentsline {subsection}{\numberline {1.1}Debut}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}\input main-1.cpt\relax }{3}% 
+\contentsline {subsection}{\numberline {1.2}\input main-1.cpt\relax }{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}Architectural Designs}{3}% 
+\contentsline {subsection}{\numberline {1.3}Architectural Designs}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Corpus Harvesting}{4}% 
+\contentsline {section}{\numberline {2}Corpus Harvesting}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Challenges}{4}% 
+\contentsline {subsection}{\numberline {2.1}Challenges}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Innovations}{4}% 
+\contentsline {subsection}{\numberline {2.2}Innovations}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Product}{7}% 
+\contentsline {subsection}{\numberline {2.3}Product}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Network Architecture}{7}% 
+\contentsline {section}{\numberline {3}Network Architecture}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Convolutional Neural Network}{8}% 
+\contentsline {subsection}{\numberline {3.1}Convolutional Neural Network}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{9}% 
+\contentsline {subsection}{\numberline {3.2}Recurrent Neural Networks}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{9}% 
+\contentsline {subsection}{\numberline {3.3}Long-Short Term Memory Configuration}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Training and Evaluation}{9}% 
+\contentsline {section}{\numberline {4}Training and Evaluation}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Limitations and Future work}{12}% 
+\contentsline {subsection}{\numberline {4.1}Limitations and Future work}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Qualitative Analysis}{15}% 
+\contentsline {section}{\numberline {A}Qualitative Analysis}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Reducing Plain Text Matches}{15}% 
+\contentsline {subsection}{\numberline {A.1}Reducing Plain Text Matches}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Team Member Roles and Contributions}{16}% 
+\contentsline {section}{\numberline {B}Team Member Roles and Contributions}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Alex}{16}% 
+\contentsline {subsection}{\numberline {B.1}Alex}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2}Blake}{17}% 
+\contentsline {subsection}{\numberline {B.2}Blake}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Compatability Challenges}{17}% 
+\contentsline {section}{\numberline {C}Compatability Challenges}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D}Topics}{19}% 
+\contentsline {section}{\numberline {D}Topics}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {D.1}Machine Learning}{19}% 
+\contentsline {subsection}{\numberline {D.1}Machine Learning}{19}

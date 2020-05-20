@@ -230,3 +230,5 @@ TEXNET
 │   └───formula_images -> paste images to perform inference on here before running inference scripts
 
 ```
+For More Model Information, Scripts to Run, and Downloadable Datasets checkout Singh's repo page:
+https://github.com/untrix/im2latex
