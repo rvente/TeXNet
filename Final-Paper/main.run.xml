@@ -53,10 +53,10 @@
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>numeric.bbx</file>
       <file>standard.bbx</file>
-      <file>ieee.cbx</file>
+      <file>numeric.bbx</file>
       <file>numeric-comp.cbx</file>
+      <file>ieee.cbx</file>
       <file>biblatex.cfg</file>
       <file>english.lbx</file>
     </requires>
