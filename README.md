@@ -1,5 +1,10 @@
-TeXNet.ai
-===========
+<p align="center">
+  <img src="assets/texnet_logo.png">
+</p>
+
+<p align="center">
+  <img src="assets/demo.png">
+</p>
 
 The prospect of accurately transcribing mathematical expression into a
 markup representation is enticing because it opens the doors for
