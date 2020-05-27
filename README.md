@@ -27,6 +27,12 @@ Static Content
 
 [Research Paper](https://github.com/rvente/TeXNet.ai/blob/master/Final-Paper/Final_Paper.pdf)
 
+Team
+----
+
+<a href="https://github.com/rvente"><img src="https://avatars2.githubusercontent.com/u/21066644?v=4" title="Blake Vente" width="120" height="120"></a>
+<a href="https://github.com/taradactyl27"><img src="https://avatars2.githubusercontent.com/u/31744974?v=4" title="Alex Taradachuk" width="120" height="120"></a>
+
 Directory Structure
 ==========
 
