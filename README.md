@@ -13,14 +13,21 @@ source code is unavailable.
 
 We make that dream a reality with this project, where we build on [Sumeet Singh's](https://github.com/untrix/im2latex) work porting the model to Python3 and bringing our own dataset of 170,000 examples.
 
+Dynamic Content
+-----------
 
-[Demo Video](https://www.youtube.com/watch?v=ew6JG2c3M24&feature=youtu.be)
+[![Demonstration Video](https://img.youtube.com/vi/ew6JG2c3M24/0.jpg)](https://www.youtube.com/watch?v=ew6JG2c3M24 "AI Translates Math Images into Code")
+
+[Sumeet S. Sigh's Project Site](https://github.com/untrix/im2latex)
+
+Static Content
+-----------
 
 [Complete Dataset](https://drive.google.com/file/d/1mwUwoyhcz63mTd3s1v4Q8QoRBPBSzGEi/view?usp=sharing)
 
+[Research Paper](https://github.com/rvente/TeXNet.ai/blob/master/Final-Paper/Final_Paper.pdf)
 
-
-Directory Structure (points of focus)
+Directory Structure
 ==========
 
 ```
@@ -58,5 +65,4 @@ TEXNET
 │   └───formula_images -> paste images to perform inference on here before running inference scripts
 
 ```
-For More Model Information, Scripts to Run, and Downloadable Datasets checkout Singh's repo page:
-https://github.com/untrix/im2latex
+
