@@ -18,7 +18,7 @@ Dynamic Content
 
 [![Demonstration Video](https://img.youtube.com/vi/ew6JG2c3M24/0.jpg)](https://www.youtube.com/watch?v=ew6JG2c3M24 "AI Translates Math Images into Code")
 
-[Sumeet S. Sigh's Project Site](https://github.com/untrix/im2latex)
+[Sumeet S. Singh's Project Site](https://github.com/untrix/im2latex)
 
 Static Content
 -----------
