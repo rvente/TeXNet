@@ -9,8 +9,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:export-ydpi="25.559999"
-   inkscape:export-xdpi="25.559999"
+   inkscape:export-ydpi="64"
+   inkscape:export-xdpi="64"
    inkscape:export-filename="/home/vente/repos/TeXNet.ai/assets/texnet_logo.png"
    sodipodi:docname="texnet_logo.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -197,7 +197,7 @@
      inkscape:window-maximized="1"
      inkscape:window-y="54"
      inkscape:window-x="0"
-     inkscape:window-height="2106"
+     inkscape:window-height="2032"
      inkscape:window-width="3840"
      fit-margin-bottom="0"
      fit-margin-right="0"
@@ -207,7 +207,7 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="122.27774"
+     inkscape:cy="282.27774"
      inkscape:cx="799.89208"
      inkscape:zoom="1"
      inkscape:pageshadow="2"
@@ -236,7 +236,7 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <rect
-       style="opacity:0.67099998;fill:#ffffff;fill-opacity:1;stroke:#6c6c6c;stroke-width:0.68712288;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#6c6c6c;stroke-width:0.68712288;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
        id="rect6643"
        width="471.08926"
        height="85.312439"
@@ -245,8 +245,8 @@
        rx="0.17756954"
        ry="0.076555334"
        inkscape:export-filename="/home/vente/repos/TeXNet.ai/assets/demo.png"
-       inkscape:export-xdpi="25.559999"
-       inkscape:export-ydpi="25.559999" />
+       inkscape:export-xdpi="106.33"
+       inkscape:export-ydpi="106.33" />
     <g
        transform="matrix(1.541422,0,0,1.541422,52.28212,-12.702662)"
        style="opacity:0.34236301;fill:#030303;fill-opacity:1;filter:url(#filter1723)"
