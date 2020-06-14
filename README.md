@@ -1,5 +1,10 @@
-TeXNet.ai
-===========
+<p align="center">
+  <img src="assets/texnet_logo.png">
+</p>
+
+<p align="center">
+  <img src="assets/demo.png">
+</p>
 
 The prospect of accurately transcribing mathematical expression into a
 markup representation is enticing because it opens the doors for
@@ -8,14 +13,27 @@ source code is unavailable.
 
 We make that dream a reality with this project, where we build on [Sumeet Singh's](https://github.com/untrix/im2latex) work porting the model to Python3 and bringing our own dataset of 170,000 examples.
 
+Dynamic Content
+-----------
 
-[Demo Video](https://www.youtube.com/watch?v=ew6JG2c3M24&feature=youtu.be)
+[![Demonstration Video](https://img.youtube.com/vi/ew6JG2c3M24/0.jpg)](https://www.youtube.com/watch?v=ew6JG2c3M24 "AI Translates Math Images into Code")
+
+[Sumeet S. Singh's Project Site](https://github.com/untrix/im2latex)
+
+Static Content
+-----------
 
 [Complete Dataset](https://drive.google.com/file/d/1mwUwoyhcz63mTd3s1v4Q8QoRBPBSzGEi/view?usp=sharing)
 
+[Research Paper](https://github.com/rvente/TeXNet.ai/blob/master/Final-Paper/Final_Paper.pdf)
 
+Team
+----
 
-Directory Structure (points of focus)
+<a href="https://github.com/rvente"><img src="https://avatars2.githubusercontent.com/u/21066644?v=4" title="Blake Vente" width="120" height="120"></a>
+<a href="https://github.com/taradactyl27"><img src="https://avatars2.githubusercontent.com/u/31744974?v=4" title="Alex Taradachuk" width="120" height="120"></a>
+
+Directory Structure
 ==========
 
 ```
@@ -53,5 +71,4 @@ TEXNET
 │   └───formula_images -> paste images to perform inference on here before running inference scripts
 
 ```
-For More Model Information, Scripts to Run, and Downloadable Datasets checkout Singh's repo page:
-https://github.com/untrix/im2latex
+
