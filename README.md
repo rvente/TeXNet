@@ -16,7 +16,7 @@ We make that dream a reality with this project, where we build on [Sumeet Singh'
 Dynamic Content
 -----------
 
-[![Demonstration Video](https://img.youtube.com/vi/ew6JG2c3M24/0.jpg)](https://www.youtube.com/watch?v=ew6JG2c3M24 "AI Translates Math Images into Code")
+[![Demonstration Video](https://img.youtube.com/vi/EnAj0js-ZRY/0.jpg)](https://www.youtube.com/watch?v=EnAj0js-ZRY "AI Translates Math Images into Code")
 
 [Sumeet S. Singh's Project Site](https://github.com/untrix/im2latex)
 
