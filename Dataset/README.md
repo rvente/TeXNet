@@ -3,5 +3,10 @@ This is our dataset, mined from January 2018's arXiv source code.
 expressions, normalized and cleaned so as to eliminate non-compiling examples and to
 facilitate deep learning tasks.
 
+![Preprocessing](https://raw.githubusercontent.com/rvente/TeXNet.ai/master/Final-Paper/assets/harvest.svg)
+
+We contribute substantially to the preprocessing pipeline including reducing false
+matches (for mathematical expressions) and unifying LaTeX patterns for normalization.
+
 Special thanks to [Brian Newbold](http://bnewbold.net/), an internet archivist, who provided
 the raw form of the data we pre-processed. Details in the paper.

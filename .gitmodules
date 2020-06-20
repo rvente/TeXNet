@@ -1,3 +1,6 @@
 [submodule "Dataset/Dataset/im2latex-dataset"]
 	path = Dataset/Dataset/im2latex-dataset
 	url = git@github.com:untrix/im2latex-dataset.git
+[submodule "Dataset/data-gen-utils"]
+	path = Dataset/data-gen-utils
+	url = git@github.com:rvente/im2latex-dataset.git
