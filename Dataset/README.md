@@ -8,6 +8,9 @@ the source of the training, test, and validation sets.
 
 We contribute substantially to the preprocessing pipeline including reducing false
 matches (for mathematical expressions) and unifying LaTeX patterns for normalization.
+As such, we only need the formula2image scripts in the data-gen-utils repository.
+
+The generated images are on [Kaggle](https://www.kaggle.com/rvente/im2latex170k).
 
 Special thanks to [Brian Newbold](http://bnewbold.net/), an internet archivist, who provided
 the raw form of the data we pre-processed. Details in the paper.
