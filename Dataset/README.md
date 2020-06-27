@@ -1,7 +1,8 @@
 This is our dataset, mined from January 2018's arXiv source code.
 `normalized_out.txt` contains upwards of 500 thousand examples of LaTeX mathematical
-expressions, normalized and cleaned so as to eliminate non-compiling examples and to
-facilitate deep learning tasks.
+expressions, normalized. `im2latex170k.txt` is the same raw data also cleaned to eliminate
+non-compiling examples and to facilitate deep learning tasks. That set of experessions is
+the source of the training, test, and validation sets.
 
 ![Preprocessing](https://raw.githubusercontent.com/rvente/TeXNet.ai/master/Final-Paper/assets/harvest.svg)
 
