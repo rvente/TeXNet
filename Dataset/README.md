@@ -5,7 +5,7 @@ non-compiling examples and to facilitate deep learning tasks. That set of expere
 the source of the training, test, and validation sets.
 
 Additionaly, `filtered_sequences.txt` offers expressions that render with KaTeX. This is the
-cleaned dataset you probably want to start with.
+cleaned dataset you probably want to start with. I also removed really long sequences there too.
 
 ![Preprocessing](https://raw.githubusercontent.com/rvente/TeXNet.ai/master/Final-Paper/assets/harvest.svg)
 
@@ -17,3 +17,8 @@ The generated images are on [Kaggle](https://www.kaggle.com/rvente/im2latex170k)
 
 Special thanks to [Brian Newbold](http://bnewbold.net/), an internet archivist, who provided
 the raw form of the data we pre-processed. Details in the paper.
+
+## Using the cleaning script
+
+Be sure to `npm install` and run `node filterNonRendering.js > <destination-file>`. The file read in
+will be `normalized_out.txt` by default, changable at will.
