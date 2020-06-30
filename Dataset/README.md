@@ -4,6 +4,9 @@ expressions, normalized. `im2latex170k.txt` is the same raw data also cleaned to
 non-compiling examples and to facilitate deep learning tasks. That set of experessions is
 the source of the training, test, and validation sets.
 
+Additionaly, `filtered_sequences.txt` offers expressions that render with KaTeX. This is the
+cleaned dataset you probably want to start with.
+
 ![Preprocessing](https://raw.githubusercontent.com/rvente/TeXNet.ai/master/Final-Paper/assets/harvest.svg)
 
 We contribute substantially to the preprocessing pipeline including reducing false
